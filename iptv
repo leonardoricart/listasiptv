@@ -1,4 +1,9 @@
 #EXTM3U
+
+#EXTINF:-1 tvg-id="" tvg-name="Nosso Futebol 01" tvg-logo="https://media.bss-prd.directvgo.com/media/catalog/product/cache/aa8f9b57193b88823014d01a51fb5400/n/o/nosso-futebol-04_1.png" group-title="Canais | Esportes PPV",tvon
+https://gml-live-secure.production.geniuslive.geniussports.com/hls/live/2005654/AFA_10068129/AFA_10068129/hdntl=exp=1680999864~acl=%2fhls%2flive%2f2005654%2fAFA_10068129%2f*~id=58a61523-e0ae-4c13-9013-bc316ee18566~data=hdntl,GR,CY,BR,RO,PT,DE,BG,CL,CZ,PE,EC~hmac=7490c2afb44f8e979506ef2ab3b09eaf139a98dd1400c9a75dd2c70d0a25d287/chunklist.m3u8
+
+
 #EXTINF:-1 tvg-id="" tvg-name="Nosso Futebol 01" tvg-logo="https://media.bss-prd.directvgo.com/media/catalog/product/cache/aa8f9b57193b88823014d01a51fb5400/n/o/nosso-futebol-04_1.png" group-title="Canais | Esportes PPV",Nosso Futebol 01
 http://pdsrv.io:80/62crp8wg/cx9wz9gd/123988
 #EXTINF:-1 tvg-id="" tvg-name="Nosso Futebol 02" tvg-logo="https://media.bss-prd.directvgo.com/media/catalog/product/cache/aa8f9b57193b88823014d01a51fb5400/n/o/nosso-futebol-04_1.png" group-title="Canais | Esportes PPV",Nosso Futebol 02
