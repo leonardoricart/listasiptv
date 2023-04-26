@@ -1,4 +1,9 @@
 #EXTM3U
+
+#EXTINF:-1 tvg-id="" tvg-name="Mosaico Jogos" tvg-logo="" group-title="Canais | Esportes TESTE",apostaganha
+https://input.futebolgratis.net:8088/hls/livechannel2.m3u8
+
+
 #EXTINF:-1 tvg-id="" tvg-name="Mosaico Jogos" tvg-logo="" group-title="Canais | Esportes PPV",Mosaico Jogos
 http://pdsrv.io:80/Izaias564/99344904/129345
 #EXTINF:-1 tvg-id="" tvg-name="Prime Video 01 | Copa do Brasil" tvg-logo="https://a4.espncdn.com/combiner/i?img=%2Fi%2Fleaguelogos%2Fsoccer%2F500%2F528.png" group-title="Canais | Esportes PPV",Prime Video 01 | Copa do Brasil
