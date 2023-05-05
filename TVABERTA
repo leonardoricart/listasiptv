@@ -5,48 +5,62 @@
 https://live-ancdn-05.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJCUiIsImRvbWFpbiI6ImxpdmUtYW5jZG4tMDUudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNjgzMzIzODAxLCJpYXQiOjE2ODMyMzc0MDEsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiNTI2YzkxYTUtNDlkNy00NDY2LWE4NTAtMDQzZGI1ZDI4NDUwIiwicGF0aCI6Ii9udS9mKGJNaW49MjAwMCxpPTIpL2dsb2JvLWNlMS9wbGF5bGlzdC5tM3U4In0.tPy1V8ivPgCZ5ny1dkf5zgFLjWCdpG8k-km-gZ0YaGyCo23uDjeKyWGnNZTdTokhxb1fD8S8y6NMSZ951FmDIPvrJ6aljnfZ_1IeQKgTz50m1At71hgub2Mn4m7yXOBYYTFW5CLbMoQNyI0X67XuPtWfaSxS68pUjhjVFH08u4QwGYzChd3lO2UbF1c53fwqQjODsAup7G02gIv2Bqa3zbdbAeVO5NvGgcBUDufu2JP7aepfj-ky4p7A_ClXSKSTNstn7HKqLhW7H3fBmui79kdFllvLOpZa4iVO0f1pgHvxF4gTIl7P47v8J4iN0ERgpirxxAAwR6IOw2TJxkHgIA/nu/f(bMin=2000,i=2)/globo-ce1/globo-ce1-audio_1=96000-video=558976.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",REDETV
-https://5b7f3c45ab7c2.streamlock.net/arapuan/ngrp:arapuan_all/chunklist_w1056569154_b2665706.m3u8
+https://5b7f3c45ab7c2.streamlock.net/arapuan/ngrp:arapuan_all/chunklist_w364509695_b1626085.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",SBT Brasília Ao Vivo
 https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",SBT youtube
+https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1683276437/ei/NW5UZIO1JpaBobIPl6SyKA/ip/167.250.137.164/id/ABVQXgr2LW4.6/source/yt_live_broadcast/requiressl/yes/tx/24537256/txs/24537256%2C24537257%2C24537258%2C24537259/hfr/1/playlist_duration/30/manifest_duration/30/maxh/4320/maudio/1/gcr/br/vprv/1/go/1/pacing/0/nvgoi/1/keepalive/yes/fexp/24007246/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaxh%2Cmaudio%2Cgcr%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRgIhAOq9-fZnU8yvPfrcbybya_me-NpRgqKFSJmhWuFrw_J-AiEAqgD4R7o-n0c_f5e0e2dtF7Yee_89rDM3DCJYIxiSXdM%3D/file/index.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",GAZETA
 https://video02.logicahost.com.br/tvc21/tvc21/chunklist_w1813343275.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV CARIOCA
 https://stmv1.duvoxtv.com.br/tvcarioca/tvcarioca/playlist.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",AWTV Ao Vivo
 https://ebocast.ebosystems.com.br:3070/live/awtvlive.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",REDE MINAS
-https://v4-slbps-sambavideos.akamaized.net/live/3282%2C8114%2Cec4b5a296d97fa99bf990662f5b4f8e1%3Bbase64np%3BMc8VDxqNjXKCAf8%21/amlst%3AMc_tFgfGiHOdQXPB/chunklist_b610304.m3u8
+
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",Rede Mundo TV Ao Vivo
 https://video01.logicahost.com.br/mundotvbrasil/mundotvbrasil/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV Guará (Record News)
 https://video02.logicahost.com.br/tvguara23/tvguara23/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",CATVE
 https://5b33b873179a2.streamlock.net:1443/live/livestream/playlist.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV NOVA PLAY
 https://srv4.zcast.com.br/tvnovaplay/tvnovaplay/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV ARACATI
 https://video04.logicahost.com.br/tvaracati/tvaracati/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",Tv Osório News
 https://serv2.videovox.pw/video13154/video13154/playlist.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV CARIOCA
-https://stmv1.duvoxtv.com.br/tvcarioca/tvcarioca/playlist.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV NORDESTE
 https://video01.logicahost.com.br/tvjornaldonordeste/tvjornaldonordeste/chunklist_w309686598.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV CIDADE
 https://video04.logicahost.com.br/tvcidade/tvcidade/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV PANTANAL MS
 https://59d39900ebfb8.streamlock.net:443/8040/8040/playlist.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV Vila Real (Record MT) SD
 https://5a2b083e9f360.streamlock.net/tvmt/tvmt.sdp/chunklist_w1122660180.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV Vila Real (Record MT) SD OPC2
 https://5a2b083e9f360.streamlock.net/tvmt/tvmt.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV Vila Real (Record MT) HD
 https://cdn.jmvstream.com/w/LVW-10842/LVW10842_513N26MDBL/chunklist.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",BAND
-https://br.embedflix.net/p2p/bandsp_720p/chunks.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",BAND
-https://stream-03.nyc.dailymotion.com/sec(xvicpH7H4LlcnXpZuORL-cTii5R5OFhEK3u7TfBc70VOwZiWIJBdx23M1wHeaYke)/cloud/3/x83vbd6/s/live-2.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",ISTV
 https://cdn.jmvstream.com/w/LVW-9883/LVW9883_lFcfKysrHF/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",REDE BRASIL
 https://5cf4a2c2512a2.streamlock.net/rbtv/rbtv/playlist.m3u8
+
+
