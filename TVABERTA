@@ -1,4 +1,9 @@
 #EXTM3U
+
+
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",Globo
+https://live-ancdn-05.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJCUiIsImRvbWFpbiI6ImxpdmUtYW5jZG4tMDUudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNjgzMzIzODAxLCJpYXQiOjE2ODMyMzc0MDEsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiNTI2YzkxYTUtNDlkNy00NDY2LWE4NTAtMDQzZGI1ZDI4NDUwIiwicGF0aCI6Ii9udS9mKGJNaW49MjAwMCxpPTIpL2dsb2JvLWNlMS9wbGF5bGlzdC5tM3U4In0.tPy1V8ivPgCZ5ny1dkf5zgFLjWCdpG8k-km-gZ0YaGyCo23uDjeKyWGnNZTdTokhxb1fD8S8y6NMSZ951FmDIPvrJ6aljnfZ_1IeQKgTz50m1At71hgub2Mn4m7yXOBYYTFW5CLbMoQNyI0X67XuPtWfaSxS68pUjhjVFH08u4QwGYzChd3lO2UbF1c53fwqQjODsAup7G02gIv2Bqa3zbdbAeVO5NvGgcBUDufu2JP7aepfj-ky4p7A_ClXSKSTNstn7HKqLhW7H3fBmui79kdFllvLOpZa4iVO0f1pgHvxF4gTIl7P47v8J4iN0ERgpirxxAAwR6IOw2TJxkHgIA/nu/f(bMin=2000,i=2)/globo-ce1/globo-ce1-audio_1=96000-video=558976.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",REDETV
 https://5b7f3c45ab7c2.streamlock.net/arapuan/ngrp:arapuan_all/chunklist_w1056569154_b2665706.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",SBT Brasília Ao Vivo
