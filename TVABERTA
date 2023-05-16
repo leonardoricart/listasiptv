@@ -66,7 +66,8 @@ https://cdn.jmvstream.com/w/LVW-9883/LVW9883_lFcfKysrHF/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",REDE BRASIL
 https://5cf4a2c2512a2.streamlock.net/rbtv/rbtv/playlist.m3u8
 
-
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",Lavras ce TV web
+https://stmv1.srvstm.com/igor8605/igor8605/playlist.m3u8
 
 
 #EXTINF:-1 tvg-logo="https://listaiptv.gratis/logos/imagens/sbt.png" group-title="Variedades",SBT Interior SP
