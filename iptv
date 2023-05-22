@@ -12,11 +12,11 @@ http://meuplay.shop:80/live/oem97d0v/0unmt83y/492.m3u8
 #EXTINF:-1 tvg-id="Globorj.br" tvg-name="GLOBO RJ FHD" tvg-logo="https://i.imgur.com/xE53HT2.png" group-title="CANAIS | GLOBO",GLOBO RJ FHD
 http://meuplay.shop:80/live/oem97d0v/0unmt83y/362.m3u8
 #EXTINF:-1 tvg-id="Globorj.br" tvg-name="GLOBO RJ H265" tvg-logo="https://i.imgur.com/xE53HT2.png" group-title="CANAIS | GLOBO",GLOBO RJ H265
-http://meuplay.shop:80/live/oem97d0v/0unmt83y/76673.m3u8
-#EXTINF:-1 tvg-id="Globorj.br" tvg-name="GLOBO RJ HD" tvg-logo="https://i.imgur.com/xE53HT2.png" group-title="CANAIS | GLOBO",GLOBO RJ HD
-http://meuplay.shop:80/live/oem97d0v/0unmt83y/335.m3u8
+plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;url=http://meuplay.shop:80/live/oem97d0v/0unmt83y/76673.m3u8
+#EXTINF:-1 tvg-id="Globorj.br" tvg-name="GLOBO RJ HD" tvg-logo="https://i.imgur.com/xE53HT2.png" group-title="CANAIS | GLOBO",GLOBO RJ HD leo
+plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;url=http://meuplay.shop:80/live/oem97d0v/0unmt83y/335.m3u8
 #EXTINF:-1 tvg-id="Globorj.br" tvg-name="GLOBO RJ SD" tvg-logo="https://i.imgur.com/xE53HT2.png" group-title="CANAIS | GLOBO",GLOBO RJ SD
-http://meuplay.shop:80/live/oem97d0v/0unmt83y/491.m3u8
+plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;url=http://meuplay.shop:80/live/oem97d0v/0unmt83y/491.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="89 FM ROCK (RADIOS)" tvg-logo="https://i.imgur.com/LepXwRM.png" group-title="RADIOS",89 FM ROCK (RADIOS)
 http://meuplay.shop:80/live/oem97d0v/0unmt83y/185.m3u8
 #EXTINF:-1 tvg-id="Ae.br" tvg-name="A&E FHD" tvg-logo="https://i.imgur.com/f2pJ8uW.png" group-title="CANAIS  | FILMES E SERIES",A&E FHD
@@ -24,9 +24,9 @@ http://meuplay.shop:80/live/oem97d0v/0unmt83y/851.m3u8
 #EXTINF:-1 tvg-id="Ae.br" tvg-name="A&E FHD H265" tvg-logo="https://i.imgur.com/f2pJ8uW.png" group-title="CANAIS  | FILMES E SERIES",A&E FHD H265
 http://meuplay.shop:80/live/oem97d0v/0unmt83y/210.m3u8
 #EXTINF:-1 tvg-id="Ae.br" tvg-name="A&E HD" tvg-logo="https://i.imgur.com/f2pJ8uW.png" group-title="CANAIS  | FILMES E SERIES",A&E HD
-http://meuplay.shop:80/live/oem97d0v/0unmt83y/1.m3u8
+plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;url=http://meuplay.shop:80/live/oem97d0v/0unmt83y/1.m3u8
 #EXTINF:-1 tvg-id="Ae.br" tvg-name="A&E SD" tvg-logo="https://i.imgur.com/f2pJ8uW.png" group-title="CANAIS  | FILMES E SERIES",A&E SD
-http://meuplay.shop:80/live/oem97d0v/0unmt83y/444.m3u8
+plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;url=http://meuplay.shop:80/live/oem97d0v/0unmt83y/444.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ALL SPORTS FHD" tvg-logo="https://i.imgur.com/1rVjgI3.png" group-title="CANAIS | ESPORTES",ALL SPORTS FHD
 http://meuplay.shop:80/live/oem97d0v/0unmt83y/31745.m3u8
 #EXTINF:-1 tvg-id="Amc.br" tvg-name="AMC FHD" tvg-logo="https://i.imgur.com/5ID1n5P.png" group-title="CANAIS  | FILMES E SERIES",AMC FHD
