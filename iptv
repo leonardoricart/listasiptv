@@ -1,8 +1,5 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="" tvg-name="AL JAZEERA EN " tvg-logo="" group-title="Entertenimento",AL JAZEERA EN 
-http://45.143.220.60:25461/13erTgyh67QxGf24/090ijkPlwqm45WsRfc/237
-#EXTINF:-1 tvg-id="" tvg-name="AL JAZEERA HD AR" tvg-logo="" group-title="Noticias",AL JAZEERA HD AR
-http://45.143.220.60:25461/13erTgyh67QxGf24/090ijkPlwqm45WsRfc/238
+
 #EXTINF:-1 tvg-id="" tvg-name="AMC FHD" tvg-logo="" group-title="Series",AMC FHD
 http://45.143.220.60:25461/13erTgyh67QxGf24/090ijkPlwqm45WsRfc/158
 #EXTINF:-1 tvg-id="" tvg-name="Animal Plannet HD" tvg-logo="" group-title="Documentarios",Animal Plannet HD
@@ -169,8 +166,6 @@ http://45.143.220.60:25461/13erTgyh67QxGf24/090ijkPlwqm45WsRfc/135
 http://45.143.220.60:25461/13erTgyh67QxGf24/090ijkPlwqm45WsRfc/60
 #EXTINF:-1 tvg-id="" tvg-name="Paramount  FHD" tvg-logo="" group-title="Series",Paramount  FHD
 http://45.143.220.60:25461/13erTgyh67QxGf24/090ijkPlwqm45WsRfc/172
-#EXTINF:-1 tvg-id="" tvg-name="Playboy TV HD" tvg-logo="" group-title="Adultos",Playboy TV HD
-http://45.143.220.60:25461/13erTgyh67QxGf24/090ijkPlwqm45WsRfc/215
 #EXTINF:-1 tvg-id="" tvg-name="Polishop" tvg-logo="" group-title="Canais Local ",Polishop
 http://45.143.220.60:25461/13erTgyh67QxGf24/090ijkPlwqm45WsRfc/10
 #EXTINF:-1 tvg-id="" tvg-name="Premiere 2 HD" tvg-logo="" group-title="Sportes",Premiere 2 HD
@@ -201,10 +196,6 @@ http://45.143.220.60:25461/13erTgyh67QxGf24/090ijkPlwqm45WsRfc/33
 http://45.143.220.60:25461/13erTgyh67QxGf24/090ijkPlwqm45WsRfc/35
 #EXTINF:-1 tvg-id="" tvg-name="Sbt HD" tvg-logo="" group-title="Canais Local ",Sbt HD
 http://45.143.220.60:25461/13erTgyh67QxGf24/090ijkPlwqm45WsRfc/1
-#EXTINF:-1 tvg-id="" tvg-name="Sextreme" tvg-logo="" group-title="Adultos",Sextreme
-http://45.143.220.60:25461/13erTgyh67QxGf24/090ijkPlwqm45WsRfc/216
-#EXTINF:-1 tvg-id="" tvg-name="Sexy Hot" tvg-logo="" group-title="Adultos",Sexy Hot
-http://45.143.220.60:25461/13erTgyh67QxGf24/090ijkPlwqm45WsRfc/217
 #EXTINF:-1 tvg-id="" tvg-name="Shoptime" tvg-logo="" group-title="Entertenimento",Shoptime
 http://45.143.220.60:25461/13erTgyh67QxGf24/090ijkPlwqm45WsRfc/152
 #EXTINF:-1 tvg-id="" tvg-name="Sic Intrenacional" tvg-logo="" group-title="Noticias",Sic Intrenacional
