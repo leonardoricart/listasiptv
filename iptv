@@ -1,10 +1,6 @@
 #EXTM3U
 
-#EXTINF:-1,teste
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
+#EXTINF:-1,teste2
+#EXTVLCOPT:http-user-agent=https://embedflix.net/
 #EXTVLCOPT:http-referrer=https://embedflix.net/
-https://br.embedflix.net/p2p/bandsp_720p/chunks.m3u8
-
-#EXTM3U
-#EXTINF:0 http-referrer="https://embedflix.net/" , Stream
 https://br.embedflix.net/p2p/bandsp_720p/chunks.m3u8
