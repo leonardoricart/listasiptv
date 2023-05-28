@@ -4,3 +4,7 @@
 #EXTVLCOPT:http-user-agent=https://embedflix.net/
 #EXTVLCOPT:http-referrer=https://embedflix.net/
 https://br.embedflix.net/p2p/bandsp_720p/chunks.m3u8
+
+#EXTINF:-1 tvg-id="600" tvg-logo="" group-title="Entertainment",AMC
+#EXTVLCOPT:http-referrer=https://embedflix.net
+https://br.embedflix.net/p2p/bandsp_720p/chunks.m3u8
