@@ -1,91 +1,1753 @@
+
 <item>
-<title>[COLOR lime][B]SEVIDOR 1[/B][/COLOR]</title>
+<title>[COLOR lightskyblue]https://freeiptv.io/playlists[/COLOR]</title>
+<link>$doregex[cristal]</link>
+<regex>
+<name>cristal</name>
+<listrepeat><![CDATA[
+<title>[COLOR white][cristal.param2][/COLOR]</title>
+<thumbnail></thumbnail>  
+<fanart></fanart>
+<link>$doregex[canal]</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#picapau
+ return re.findall('(?s)<option value=".*?>\((.*?)\).(.*?)<',re.findall('<select id="select\_country.+?>(?s)(.*?)</select>',page_data)[0])
+]]></expres>
+<page>https://freeiptv.io/playlists/</page>
+</regex>
+<regex>
+<name>canal</name>
+<listrepeat><![CDATA[
+<title>[COLOR white][canal.param1][/COLOR]</title>
+<thumbnail></thumbnail>  
+<fanart></fanart>
+<link>ignore</link>
+<externallink>[canal.param2]?c=[cristal.param1]$$TSDOWNLOADER$$</externallink>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#picapau
+ return re.findall('(?s)<option value=".*?>\((.*?)\).(.*?)<',re.findall('Select Your Playlist.+?>(?s)(.*?)</select>',page_data)[0])
+]]></expres>
+<page>https://freeiptv.io/playlists/</page>
+</regex>
+<thumbnail></thumbnail>  
+<fanart></fanart>
+</item>
+
+<item>
+<title>HBO</title>
+<link>$doregex[getUrl]</link>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+ inf=re.findall('id=[\'"](\d+).+?src=[\'"](h[^\'"]+)',page_data)[0];headers={'user-agent':'Mozilla/5.0','referer':'http://www.futbol-envivohd.com/tv/hbo.php'}
+ source=requests.get(inf[1],headers=headers,verify=False).content.decode('ascii','ignore');url=re.findall('src="(h[^\'"]+)',source)[0]+inf[0]
+ source=requests.get(url,headers=headers,verify=False).content.decode('ascii','ignore')
+ return re.findall('Clappr.Player[\w\W]*?[\'"](h[^\'"]+)',source)[0]+'|user-agent=Mozilla/5.0&referer='+url
+]]></expres>
+<page>http://www.futbol-envivohd.com/tv/hbo.php</page>
+</regex>
+</item>
+
+<item>
+<title>http://www.glwiz.com/homepage.aspx</title>
 <link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
 <listrepeat><![CDATA[
-<title>[makelist.param1]</title>
-<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=[makelist.param1]&amp;url=$doregex[encodedurl]</link>
-<thumbnail>NA</thumbnail>
+  <title>[COLOR gold][makelist.param2][/COLOR]</title>
+  <link>$doregex[makelist2]</link>
 ]]></listrepeat>
-<expres>#EXTINF:.*,(.*?)\n.*(http.*m3u8)</expres>
-<page>https://cineboxplay.blogspot.com/2021/04/servidor-1.html</page>
-<referer></referer>
-<x-forward></x-forward>
-<agent>Kodi/18.0</agent>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  source=requests.get('http://www.glwiz.com/'+re.findall('onclick="makeHttpRequest\([\'"](.+=tv[^\'"]+)',page_data)[0],headers={'user-agent':'Mozilla/5.0','referer':'http://www.glwiz.com/homepage.aspx'}).text
+  return re.findall('onclick="makeHttpRequest\([\'"]([^\'"]+).+?>([^<]+)',source)
+]]></expres>
+<page>http://www.glwiz.com/homepage.aspx</page>
 </regex>
 <regex>
-<name>encodedurl</name>
-<expres>$pyFunction:urllib.quote_plus('[makelist.param2]')<expres>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist2.param4][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist2.param3]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('GotoURL\([\'"](.*?=(.*?)&[^\'"]+).+?src="(.*?)".+?>([^<]+)',re.findall('id="listContainerScroll">(?s)(.*)',page_data)[0])
+]]></expres>
+<page>http://www.glwiz.com/[makelist.param1]</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,random,math,time
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  source=requests.get('http://www.glwiz.com/js/glapi.ashx?v=40',headers={'user-agent':'Mozilla/5.0','referer':'http://www.glwiz.com/[makelist2.param1]','host':'www.glwiz.com','accept':'*/*'}).text
+  url='http://www.glwiz.com/'+re.findall('flPlay\(pureUrl[\w\W]*?[\'"](.*?ppoint=)[\'"]',page_data)[0]+'[makelist2.param2]'+'&ref='+str(int(time.time()*1000 + math.floor(random.random() * 9999)))
+  source=requests.get(url,headers={'user-agent':'Mozilla/5.0','referer':'http://www.glwiz.com/[makelist2.param1]','host':'www.glwiz.com','accept':'*/*','X-hello-data':re.findall('X-hello-data".+?"([^"]+)',source)[0]}).text
+  return source+'|user-agent=Mozilla/5.0&referer=http://www.glwiz.com/js/flash/flowplayer.commercial-3.2.18.swf'
+]]></expres>
+<page>http://www.glwiz.com/[makelist2.param1]</page>
+<referer>http://www.glwiz.com/homepage.aspx</referer>
+</regex>
+</item>
+
+<item>
+<title>http://www.glwiz.com/homepage.aspx</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param3][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+#  url='http://www.glwiz.com/'+re.findall('onclick="makeHttpRequest\([\'"](.+=tv[^\'"]+)',page_data)[0]
+  source=requests.get('http://www.glwiz.com/'+re.findall('onclick="makeHttpRequest\([\'"](.+=tv[^\'"]+)',page_data)[0],headers={'user-agent':'Mozilla/5.0','referer':'http://www.glwiz.com/homepage.aspx'}).text
+  return re.findall('Goto.+?[\'"]([^\'"]+).+?src="([^"]+).+?>([^<]+)',re.findall('id="listContainerScroll">(?s)(.*)',source)[0])
+]]></expres>
+<page>http://www.glwiz.com/homepage.aspx</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,urllib,random,math,time
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  source=requests.get('http://www.glwiz.com/js/glapi.ashx?v=40',headers={'user-agent':'Mozilla/5.0','referer':'http://www.glwiz.com/[makelist.param1]','host':'www.glwiz.com','accept':'*/*'}).text
+  url='http://www.glwiz.com/'+re.findall('flPlay\(pureUrl[\w\W]*?[\'"](.*?ppoint=)[\'"]',page_data)[0]+urllib.quote_plus('[makelist.param3]')+'&ref='+str(int(time.time()*1000 + math.floor(random.random() * 9999)))
+  source=requests.get(url,headers={'user-agent':'Mozilla/5.0','referer':'http://www.glwiz.com/[makelist.param1]','host':'www.glwiz.com','accept':'*/*','X-hello-data':re.findall('X-hello-data".+?"([^"]+)',source)[0]}).text
+  return source+'|user-agent=Mozilla/5.0&referer=http://www.glwiz.com/js/flash/flowplayer.commercial-3.2.18.swf'
+]]></expres>
+<page>http://www.glwiz.com/[makelist.param1]</page>
+<referer>http://www.glwiz.com/homepage.aspx</referer>
+</regex>
+</item>
+
+<item>
+<title>http://s1.tinydl.info/Movies2/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+   <title>[COLOR gold][makelist.param2][/COLOR]</title>
+   <link>$doregex[makelist2]</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('<td><a href="([^"]+)".title="([^"]+)',re.findall('Parent.+?>(?s)(.*?)</tbody',page_data)[0].replace('&#8211;','-').replace('&#8216;','\'').replace('&#8217;','\'').replace('&#8221;','"').replace('&#8230;','...').replace('&#038;','&'))
+]]></expres>
+<page>http://s1.tinydl.info/Movies2/</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+   <title>$pyFunction:('[makelist2.param2]').replace('_',' ')</title>
+   <link>http://s1.tinydl.info/Movies2/[makelist.param1]/[makelist2.param1]</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('<td><a.href="([^"]+)".title.+?>([^&<]+)',re.findall('Parent.+?>(?s)(.*?)</tbody',page_data)[0].replace('&#8211;','-').replace('&#8216;','\'').replace('&#8217;','\'').replace('&#8221;','"').replace('&#8230;','...').replace('&#038;','&'))
+]]></expres>
+<page>http://s1.tinydl.info/Movies2/[makelist.param1]</page>
+<referer>http://s1.tinydl.info/Movies2/</referer>
+</regex>
+</item>
+
+<item>
+<title>www.parsatv.com</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param2][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('href="(.*?)".+?myButton">(.*?)</button>',re.findall('<input onkeypress="(?s)(.*?)<td align="center"',page_data)[0])
+]]></expres>
+<page>https://www.parsatv.com/</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,urllib
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  r=requests.get('[makelist.param1]',headers={'Referer':'https://www.parsatv.com/','User-Agent':'Mozilla/5.0'},verify=False)
+  url=re.findall('iframe.src.+?[\'"]([^"]+)&auto',r.text)[0]
+  source=requests.get(url,headers={'Referer':'[makelist.param1]','User-Agent':'Mozilla/5.0'},cookies=r.cookies).text
+  return re.findall('file.+?[\'"]([^\'"]+)',source)[0]+'|User-Agent=iPad&Referer='+url
+]]></expres>
+<page></page>
+<referer></referer>
+</regex>
+<thumbnail>https://www.parsatv.com/index_files/parsalogo.png</thumbnail>
+</item>
+
+<item>
+<title>ÇUKUR</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR yellow][makelist.param3][/COLOR]</title>
+<link>$doregex[makelist2]</link>
+<thumbnail>[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[(?s)box-info-type-3".+?"/(.*?)".+?src="(.*?)".+?title">([^<]+)]]></expres>
+<page>https://www.showtv.com.tr/dizi/tum_bolumler/cukur-sezon-1-bolum-1-izle/44178</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[COLOR dodgerblue]Episode [makelist2.param1][/COLOR] - [COLOR yellow][makelist.param3][/COLOR]</title>
+<link>$doregex[getUrl]</link>
+<thumbnail>[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data, Cookie_Jar, m):
+ if '"video-part"' in page_data:
+   list=re.findall('video-part-name">(?s)(.*?)</ul',page_data)[0]
+   title=re.findall('href.+?>(\d+)<',list);link=re.findall('href="/([^"]+)',list)
+   return zip(title,link)
+ elif '"video-part"' not in page_data:
+   list=re.findall('"TVEpisode"(?s)(.*?)</script',page_data)[0].replace('\\','')
+   return re.findall('"episodeNumber":"([^"]+)".+?url".+?.tr/([^"]+)',list)
+]]></expres>
+<page>https://www.showtv.com.tr/[makelist.param1]</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re, requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+ list=re.findall('"ht_files"(?s)(.*?)<script',page_data)[0].replace('\\','')
+ if '"1080"' in list:
+   return re.findall('"1080"."file":"([^"]+)',list)[-1]
+ elif '"720"' in list:
+   return re.findall('"720"."file":"([^"]+)',list)[-1]
+ elif 'ht_mobile_m3u8' in list:
+   return re.findall('"ht_mobile_m3u8":"([^"]+)',list)[0]+'|user-agent=iPad'
+ else:
+   return re.findall('"popcorn:stream".content="([^"]+)',list)[0]+'|user-agent=iPad'
+]]></expres>
+<page>https://www.showtv.com.tr/[makelist2.param2]</page>
+</regex>
+</item>
+
+<item>
+<title>http://cxtv.eu/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>([makelist.param1]) [COLOR yellow][makelist.param2] vs [makelist.param3][/COLOR]</title>
+  <link>$doregex[makelist2]</link>
+]]></listrepeat>
+<expres><![CDATA[(?s)col-date">(\d+:\d+).+?team">(.*?)<.+?team">(.*?)<.+?pad-sides">(?s)(.*?)</div]]></expres>
+<page>http://cxtv.eu/Lista.php</page>
+<referer>http://cxtv.eu/</referer>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR yellow][makelist2.param2][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+]]></listrepeat>
+<expres><![CDATA[href.+?/(S[^\'"]+).+?>(St.+?(?:1|5))<]]></expres>
+<page>[makelist.param4]</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+ source=requests.get(re.findall('src=[\'"]([^\'"]+)',page_data)[0],headers={'user-agent':'Mozilla/5.0','referer':'http://cxtv.eu/[makelist2.param1]'}).text
+ return re.findall('(?:file|source).+?[\'"](h[^\'"]+)',source)[0]+'|user-agent=Mozilla/5.0&referer='+re.findall('src=[\'"]([^\'"]+)',page_data)[0]
+]]></expres>
+<page>http://cxtv.eu/[makelist2.param1]</page>
+<referer>http://cxtv.eu/Lista.php</referer>
+</regex>
+</item>
+
+<item>
+<title>MyVODk</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param1][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>https://2.bp.blogspot.com/-O3Nojx8yWKU/W7GbLqypQhI/AAAAAAAAG_A/wsLG6GUI38YsFEtSh34VegjKUrW5TAfDwCLcBGAs/s1600/Cik%2BReen%2BEncik%2BNgok%2BNgek.jpg</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[fa-video-camera".+?/i>(.*?)<a.href="/([^"]+)]]></expres>
+<page>https://web.yflix.net/watch/video-blHwlepWmi.html</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data, Cookie_Jar, m):#streamwatcher2013
+ if '"720"' in page_data:
+   return re.findall('"720p":"([^"]+)',page_data)[0]
+ elif 'window.location' in page_data:
+   return re.findall('window.location="([^"]+)&dl=',page_data)[0]
+ else:
+   return re.findall('Whatsapp.+?href=(.*?)&dl=',page_data)[0]
+]]></expres>
+<page>https://web.yflix.net/[makelist.param2]</page>
+</regex>
+<thumbnail>https://2.bp.blogspot.com/-O3Nojx8yWKU/W7GbLqypQhI/AAAAAAAAG_A/wsLG6GUI38YsFEtSh34VegjKUrW5TAfDwCLcBGAs/s1600/Cik%2BReen%2BEncik%2BNgok%2BNgek.jpg</thumbnail>
+</item>
+
+<item>
+<title>TEN Canal 10</title>
+<link>$doregex[getUrl]</link>
+<thumbnail>http://www.honduras504.com/img/tv/TEN-Canal-10.jpg</thumbnail>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+ link=re.findall('"vid-player"[\w\W]*?src="([^\'"]+)',page_data)[0]
+ html=re.findall('"playlist":.+?"([^"]+)',requests.get(link,headers={'user-agent':'Mozilla/5.0','referer':'http://www.honduras504.com/tv/10/TEN'}).text)[0]
+ if 'http' not in html:
+   return re.findall('"file":"([^"]+)',requests.get('http:'+html,headers={'referer':link,'user-agent':'Mozilla/5.0'}).text)[0]+'|user-agent=Mozilla/5.0&referer=http://www.honduras504.com/tv/10/TEN'
+ else:
+   return re.findall('"file":"([^"]+)',requests.get(html,headers={'referer':link,'user-agent':'Mozilla/5.0'}).text)[0]+'|user-agent=Mozilla/5.0&referer=http://www.honduras504.com/tv/10/TEN'
+]]></expres>
+<page>http://www.honduras504.com/tv/10/TEN#tvhn</page>
+</regex>
+</item>
+
+<item>
+<title>https://tumarcador.xyz/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param1][/COLOR] ([makelist.param2])</title>
+  <link>$doregex[makelist2]</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  list=re.findall('class="table">(?s)(.*?)<script',requests.get('https://tumarcador.xyz/').content.decode('ascii','ignore'))[0]
+  title=re.findall('"Evento".+\n.*?(\w.*)\n',list);date=re.findall('"Hora".+\n.+?(\d.*)',list);links=re.findall('"Enlace">(?s)(.*?)</div',list)
+  return zip(title,date,links)
+]]></expres>
+<page>https://tumarcador.xyz/</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist2.param2][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+]]></listrepeat>
+<expres><![CDATA[href="(.*?)">([^<]+)]]></expres>
+<page>[makelist.param3]</page>
+<referer>https://tumarcador.xyz</referer>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('Clappr.Player[\w\W]*?[\'"]([^\'"]+)',page_data)[0]+'|user-agent=ipad&referer=http://tumarcador.xyz/[makelist2.param1]'
+]]></expres>
+<page>http://tumarcador.xyz/[makelist2.param1]</page>
+<referer>https://tumarcador.xyz</referer>
+</regex>
+</item>
+
+<item>
+<title>http://www.livrefilmeshd.net/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param1][/COLOR] ([makelist.param2])</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>[makelist.param4]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  mdata=re.findall('class="toltips"><h3>(.*?)<.*?fa-calendar-alt.*?(\d+).*?fa-user".*?href="(.*?)".+?src="([^"]+)',re.findall('<ul id="posts">(?s)(.*?)(?:id="posts"|navigation)',page_data)[0])
+  count=10;pn=2;data=[]
+  while pn <= int(count):
+    page='http://www.livrefilmeshd.net/page/'+str(pn)+'/';source=requests.get(page).content.decode('ascii','ignore')
+    data +=re.findall('class="toltips"><h3>(.*?)<.*?fa-calendar-alt.*?(\d+).*?fa-user".*?href="(.*?)".+?src="([^"]+)',re.findall('<ul id="posts">(?s)(.*?)(?:id="posts"|navigation)',source)[0]);pn +=1
+  return  mdata+data
+]]></expres>
+<page>http://www.livrefilmeshd.net/</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>Server: [COLOR gold][makelist2.param2][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist.param4]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('div><div.class="embed\d-play".*?data-src="(h.+?//(?:www.|)(.*?)\.[^"]+)',re.findall('class="player">(?s)(.*?)<ul',page_data)[0])
+]]></expres>
+<page>[makelist.param3]</page>
+<referer>http://www.livrefilmeshd.net/</referer>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,urlresolver
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return urlresolver.resolve('[makelist2.param1]')
+]]></expres>
 <page></page>
 </regex>
 </item>
 
 <item>
-<title>[COLOR lime][B]SEVIDOR 2[/B][/COLOR]</title>
+<title>http://www.livrefilmeshd.net/ | ResolverURL</title>
 <link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
 <listrepeat><![CDATA[
-<title>[makelist.param1]</title>
-<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=[makelist.param1]&amp;url=$doregex[encodedurl]</link>
-<thumbnail>NA</thumbnail>
+  <title>[COLOR gold][makelist.param1][/COLOR] ([makelist.param2])</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>[makelist.param4]</thumbnail>
 ]]></listrepeat>
-<expres>#EXTINF:.*,(.*?)\n.*(http.*m3u8)</expres>
-<page>https://cineboxplay.blogspot.com/2021/04/servidor-2.html</page>
-<referer></referer>
-<x-forward></x-forward>
-<agent>Kodi/18.0</agent>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  mdata=re.findall('class="toltips"><h3>(.*?)<.*?fa-calendar-alt.*?(\d+).*?fa-user".*?href="(.*?)".+?src="([^"]+)',re.findall('<ul id="posts">(?s)(.*?)(?:id="posts"|navigation)',page_data)[0])
+  count=10;pn=2;data=[]
+  while pn <= int(count):
+    page='http://www.livrefilmeshd.net/page/'+str(pn)+'/';source=requests.get(page).content.decode('ascii','ignore')
+    data +=re.findall('class="toltips"><h3>(.*?)<.*?fa-calendar-alt.*?(\d+).*?fa-user".*?href="(.*?)".+?src="([^"]+)',re.findall('<ul id="posts">(?s)(.*?)(?:id="posts"|navigation)',source)[0]);pn +=1
+  return  mdata+data
+]]></expres>
+<page>http://www.livrefilmeshd.net/</page>
 </regex>
 <regex>
-<name>encodedurl</name>
-<expres>$pyFunction:urllib.quote_plus('[makelist.param2]')<expres>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>Server: [COLOR gold][makelist2.param2][/COLOR]</title>
+  <urlsolve>[makelist2.param1]</urlsolve>
+  <thumbnail>[makelist.param4]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('div><div.class="embed\d-play".*?data-src="(h.+?//(?:www.|)(.*?)\.[^"]+)',re.findall('class="player">(?s)(.*?)<ul',page_data)[0])
+]]></expres>
+<page>[makelist.param3]</page>
+<referer>http://www.livrefilmeshd.net/</referer>
+</regex>
+</item>
+
+<item>
+<title>tvpemobil</title>
+<link>$doregex[makelist2]</link>
+<thumbnail></thumbnail>
+ <regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+    <title>[makelist2.param2]</title>
+    <link>$doregex[makelist]</link>
+	<thumbnail></thumbnail>
+        <fanart></fanart>
+]]></listrepeat>
+<expres><![CDATA[&bull;\s<a href="(.*?)">(.*?)<]]></expres>
+<page>http://tvpemobil.net/</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+    <title>[makelist.param2]</title>
+    <link>[makelist.param3]|user-agent=iPad</link>
+	<thumbnail>[makelist.param1]</thumbnail>
+        <fanart></fanart>
+]]></listrepeat>
+<expres>img src="(.*?)".*?alt=".*?bull;\s(.*?)<.*?href="(.*?)"</expres>
+<page>[makelist2.param1]</page>
+<referer></referer>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+<item>
+<title>america</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;url=$doregex[getHDS]$doregex[getQuote]&amp;name=envivo</link> 
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[atob\("(.*?)"]]></expres>
+<page>http://vmf.edge-apps.net/embed/live.php?streamname=americahls-100056&amp;autoplay=true</page>
+<referer></referer>
+<agent>Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getdecoded</name>
+<expres>$pyFunction:base64.b64decode('$doregex[getUrl]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>getQuote</name>
+<expres>$pyFunction:urllib.quote_plus('|Referer=http://vmf.edge-apps.net/embed/live.php?streamname=americahls-100056&amp;autoplay=true')</expres>
+<page></page>
+</regex>
+<regex>
+<name>getHDS</name>
+<expres><![CDATA[hds":"(.*?)"]]></expres>
+<page>$doregex[getdecoded]</page>
+<referer></referer>
+<agent>Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36</agent>
+<cookieJar></cookieJar>
+</regex>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>karwan.tv</title>
+<link>$doregex[makelist]</link>
+<regex>
+  <name>makelist</name>
+  <listrepeat><![CDATA[
+        <title>[makelist.param3]</title>
+        <link>$doregex[getUrl]|User-Agent=iPad</link>
+        <thumbnail>http://karwan.tv/[makelist.param2]</thumbnail>
+         <fanart>http://karwan.tv/[makelist.param2]</fanart>
+]]></listrepeat>
+<expres><![CDATA[href="(.*?)".*?\s.*src="(.*?)"\salt="(.*?)"]]></expres>
+<page>http://karwan.tv/</page>
+<referer>http://karwan.tv/</referer>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):
+  source=requests.get('http://karwan.tv/[makelist.param1]', headers={'User-Agent':'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0','Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'}).text;link='http://karwan.tv/'+re.findall('src="(.*php.*?)"',source)[0]
+  source=requests.get(link,headers={'User-Agent':'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0','Referer':'http://karwan.tv/[makelist.param1]','Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'}).text;return re.findall('file: "(.*?)"',source)[0]+'|User-Agent=iPad&Referer='+link
+]]></expres>
 <page></page>
 </regex>
 </item>
 
 <item>
-<title>[COLOR lime][B]SEVIDOR 3[/B][/COLOR]</title>
+<title>http://baku.video/movie/lang/tr</title>
 <link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
 <listrepeat><![CDATA[
-<title>[makelist.param1]</title>
-<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=[makelist.param1]&amp;url=$doregex[encodedurl]</link>
-<thumbnail>NA</thumbnail>
+  <title>[COLOR gold][makelist.param1][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>http://[makelist.param3]</thumbnail>
 ]]></listrepeat>
-<expres>#EXTINF:.*,(.*?)\n.*(http.*m3u8)</expres>
-<page>https://cineboxplay.blogspot.com/2021/04/servidor-3.html</page>
-<referer></referer>
-<x-forward></x-forward>
-<agent>Kodi/18.0</agent>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  count=20;pn=2;data=[]
+  while pn <= int(count):
+    page='http://baku.video/movie/lang/tr?page='+str(pn);source=requests.get(page).text
+    data +=re.findall('(?s)"h4 no-margin">(.*?)<.*?href="(.*?)".+?src.+?//([^"]+)',re.findall('class="ias_wrapper">(?s)(.*?)"pagination',source)[0]);pn +=1
+  return data
+]]></expres>
+<page></page>
 </regex>
 <regex>
-<name>encodedurl</name>
-<expres>$pyFunction:urllib.quote_plus('[makelist.param2]')<expres>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  inf=re.findall('flashplayer.+?[\'"]([^\'"]+)[\w\W]*?playlist.+?[\'"]([^\'"]+)',page_data)[0]
+  source=requests.get(inf[1],headers={'referer':'[makelist.param2]','user-agent':'Mozilla/5.0','accept':'*/*'}).text
+  if 'm3u8' in source:
+    return re.findall('source.file="([^\'"]+)',source)[-1]+'|user-agent=Mozilla/5.0&referer='+inf[0]
+  else:
+    return re.findall('source.file="([^"]+)".label',source)[0]
+]]></expres>
+<page>[makelist.param2]</page>
+<referer>'http://baku.video/movie/lang/tr</referer>
+</regex>
+<thumbnail>http://baku.video/assets/icons/android-chrome-192x192.png</thumbnail>
+</item>
+
+<item>
+<title>Soccer Full Match & Highlights</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param2][/COLOR]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>https://armchairsommelier.files.wordpress.com/2014/07/world-ball.jpg</thumbnail>
+  <fanart>https://full-matches.com/wp-content/uploads/2017/05/backround-full-matches.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall("href='/(.*?)'.+?'name'>([^<]+)",re.findall('Home</span></a></li>(?s)(.*?)<form',page_data)[0])
+]]></expres>
+<page>http://www.replaymatches.com/</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist2.param3][/COLOR] [makelist2.param4]</title>
+  <link>$doregex[makelist3]</link>
+  <thumbnail>[makelist2.param1]</thumbnail>
+  <fanart>https://full-matches.com/wp-content/uploads/2017/05/backround-full-matches.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall("content='(.*?)'[\w\W]*?href='(.*?)'.title='(.*?)(?:.(\d[^']+)|')",re.findall("id='post-wrapper'>(?s)(.*?)'blog-pager'",source)[0])
+]]></expres>
+<page>http://www.replaymatches.com/[makelist.param1]?max-results=200</page>
+</regex>
+<regex>
+<name>makelist3</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist3.param2][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist2.param1]</thumbnail>
+  <fanart>https://full-matches.com/wp-content/uploads/2017/05/backround-full-matches.jpg</fanart>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('class="link-iframe".href="(h.*?)".+?>([^<]+)',re.findall('</h1>(?s)(.*?)<iframe',page_data)[0].replace('amp;',''))
+]]></expres>
+<page>[makelist2.param2]</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,urlresolver
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  serv='[makelist3.param1]'
+  if 'weshare.me' in serv:
+    return re.findall('id="my-video"[\w\W]*?src="([^"]+)',requests.get(serv,headers={'User-Agent': 'Mozilla/5.0','Referer':'[makelist2.param2]','Accept':'*/*'}).text)[0]+'|user-agent=ipad&referer=[makelist3.param1]'
+  elif 'streamable.com' in serv:
+    link=re.findall('href="([^"]+).+?id="download"',requests.get(serv,headers={'User-Agent': 'Mozilla/5.0','Referer':'[makelist2.param2]','Accept':'*/*'}).text)[0]
+    if 'http' in link:
+      return link+'|user-agent=ipad&referer=[makelist3.param1]'
+    else:
+      return 'https:'+link+'|user-agent=ipad&referer=[makelist3.param1]'
+  else:
+    return urlresolver.resolve(serv)
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://armchairsommelier.files.wordpress.com/2014/07/world-ball.jpg</thumbnail>
+<fanart>https://full-matches.com/wp-content/uploads/2017/05/backround-full-matches.jpg</fanart>
+</item>
+
+<item>
+<title>http://toplive.info/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param1][/COLOR]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>https://i.imgur.com/Q1AI3P3.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):
+  return re.findall('</i>([^<]+)</h4>(?s)(.*?)(?:class="titleag|</tbody)',re.findall('class="table-container">(?s)(.*?)</table',page_data)[0])
+]]></expres>
+<page>http://toplive.info/</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist2.param1][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>https://i.imgur.com/Q1AI3P3.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[(?s)</i>([^<]+)</h4.+?href="(.*?)"]]></expres>
+<page>[makelist.param2]</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+from urlresolver.plugins.lib import jsunpack
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  link=re.findall('"embed-responsive[\w\W]*?src="([^"]+)',requests.get('http://toplive.info/[makelist2.param2]',headers={'referer':'http://toplive.info/','user-agent':'Mozilla/5.0'}).text)[0]
+  if 'm3u8' in link:
+    url='http://toplive.info/'+link
+    source=requests.get(url,headers={'user-agent':'Mozilla/5.0','Referer':'http://toplive.info/[makelist2.param2]'}).text
+    link=re.findall('Clappr.Player[\w\W]*?[\'"]([^\'"]+)',source)[0]
+    source=requests.get(link,headers={'user-agent':'Mozilla/5.0','Referer':url}).text
+    if 'x576' in source:
+      return link.replace('index','Stream(04)/index')+'|user-agent=Mozilla/5.0&referer='+url
+    elif 'x432' in source:
+      return link.replace('index','Stream(03)/index')+'|user-agent=Mozilla/5.0&referer='+url
+    else:
+      return link+'|user-agent=Mozilla/5.0&referer='+url
+  elif 'http' in link:
+    source=requests.get(link,headers={'user-agent':'Mozilla/5.0','Referer':'http://toplive.info/[makelist2.param2]'}).text
+    return re.findall('Clappr.Player[\w\W]*?[\'"]([^\'"]+)',source)[0]+'|user-agent=Mozilla/5.0&referer='+link
+  else:
+    url='http://toplive.info/'+link;mozhdr={'User-Agent':'Mozilla/5.0','Referer':'http://toplive.info/[makelist2.param2]'};source=requests.get(url,headers=mozhdr,verify=False).text
+    cid=re.findall("id='([^']+).+?telerium",source)[0];eurl='https://telerium.tv/embed/%s.html'%cid;ehtml=requests.get(eurl,headers=mozhdr).text
+    edata=re.findall('(eval\(function\(p,a,c,k,e,d.*)',ehtml)[0];epage=jsunpack.unpack(edata).replace('\\', '')
+    strvar=re.findall('source:([^,]+),mime',epage)[0];str1=re.findall('%s=atob\(rSt\(([^)]+)'%strvar,epage)[0];str2=re.findall('%s="([^"]+)'%str1,epage)[0][::-1].decode('base64')
+    tok1,tok2=re.findall('{url:atob\(rSt\(([^)]+)\)\)\+atob\(rSt\(([^)]+)',epage)[0];tok1=re.findall('%s="([^"]+)'%tok1,epage)[0][::-1].decode('base64');tok2=re.findall('%s="([^"]+)'%tok2,epage)[0][::-1].decode('base64')
+    tokurl='https:%s%s'%(tok1,tok2);mozhdr['Referer']=eurl;token=requests.get(tokurl,headers=mozhdr).text[::-1][1:-1]
+    return 'https:%s%s|referer=%s&user-agent=%s'%(str2,token,eurl,mozhdr['User-Agent'])
+]]></expres>
+<page></page>
+<referer></referer>
+</regex>
+<thumbnail>https://i.imgur.com/Q1AI3P3.png</thumbnail>
+</item>
+<item>
+<title>Soccer Full Match & Highlights</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param3][/COLOR] ([makelist.param4])</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>[makelist.param1]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall("content='(.*?)'[\w\W]*?href='(.*?)'.title='(.*?)\s(\d[^']+)",re.findall("id='post-wrapper'>(?s)(.*?)'blog-pager'",page_data)[0])
+]]></expres>
+<page>http://www.replaymatches.com/search?max-results=200</page>
+<referer>http://www.replaymatches.com/</referer>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist2.param2][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist.param1]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[class="link-iframe".href="(h.*?)".+?>([^<]+)]]></expres>
+<page>[makelist.param2]</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,urlresolver
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  serv='[makelist2.param1]'
+  if 'streamable.com' in serv:
+    link=re.findall('href="([^"]+).+?id="download"',requests.get(serv,headers={'User-Agent': 'Mozilla/5.0','Referer':'[makelist2.param2]','Accept':'*/*'}).text)[0]
+    if 'http' in link:
+      return link+'|user-agent=ipad&referer=[makelist2.param1]'
+    else:
+      return 'https:'+link+'|user-agent=ipad&referer=[makelist2.param1]'
+  else:
+    return urlresolver.resolve(serv)
+]]></expres>
 <page></page>
 </regex>
 </item>
 
 <item>
-<title>[COLOR lime][B]SEVIDOR 4[/B][/COLOR]</title>
+<title>Rugby Full Match</title>
 <link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
 <listrepeat><![CDATA[
-<title>[makelist.param1]</title>
-<link>plugin://plugin.video.f4mTester/?streamtype=TSDOWNLOADER&amp;name=[makelist.param1]&amp;url=$doregex[encodedurl]</link>
-<thumbnail>NA</thumbnail>
+  <title>([makelist.param4]) [COLOR gold][makelist.param1][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist.param3]</thumbnail>
 ]]></listrepeat>
-<expres>#EXTINF:.*,(.*?)\n.*(http.*m3u8)</expres>
-<page>https://cineboxplay.blogspot.com/2021/04/servidor-4.html</page>
-<referer></referer>
-<x-forward></x-forward>
-<agent>Kodi/18.0</agent>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('"title".+?:\s(.*?)".+?link":"(.*?)".+?"medium":"(.*?)".+?"date":"([^"]+)',re.findall('(.*)',page_data)[0].replace('\\',''))
+]]></expres>
+<page>https://www.premiershiprugby.com/wp-json/wp/v2/feed?endpoint=combined&amp;posts_per_page=75&amp;categories=160&amp;offset=&amp;orderby=date&amp;order=desc</page>
+<referer>https://www.premiershiprugby.com/videos/full-match-video/</referer>
 </regex>
 <regex>
-<name>encodedurl</name>
-<expres>$pyFunction:urllib.quote_plus('[makelist.param2]')<expres>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  url=re.findall('class="video"[\w\W]*?script.src="([^"]+)',page_data)[0]
+  source=requests.get(url,headers={'User-Agent': 'Mozilla/5.0','Referer':'[makelist.param2]','Accept':'*/*'}).text.replace('\\','')
+  inf=re.findall('"thumbnailUrl.+?"(h.+?)thumbnail.+?"rootEntryId.+?(\w.*?)".+?width.+?"id":"(.*?)".+?width.+?"id":"(.*?)".+?width.+?"id":"(.*?)".+?width.+?"id":"(.*?)".+?2628.+?"id":"(.*?)".+?kuiconfid="([^"]+)',source)[0]
+  link='%splayManifest/entryId/%s/flavorIds/%s,%s,%s,%s,%s,%s,%s,%s/format/applehttp/protocol/https/a.m3u8?clientTag=html5:v2.42&uiConfId=%s'%(inf[0],inf[1],inf[2],inf[3],inf[4],inf[4],inf[5],inf[5],inf[6],inf[6],inf[7])
+  source=requests.get(link,headers={'User-Agent': 'Mozilla/5.0','Referer':'[makelist.param2]','Accept':'*/*'}).text
+  if 'x720' in source:
+    return re.findall('x720.*\n(.*)',source)[0]+'|user-agent=ipad&referer='+link
+  elif 'x576' in source:
+    return re.findall('x576.*\n(.*)',source)[0]+'|user-agent=ipad&referer='+link
+  else:
+    return re.findall('x360.*\n(.*)',source)[-1]+'|user-agent=ipad&referer='+link
+]]></expres>
+<page>[makelist.param2]</page>
+</regex>
+<thumbnail>https://d2cx26qpfwuhvu.cloudfront.net/premier/wp-content/uploads/2018/06/20160225/premiership_rugby_logo.svg</thumbnail>
+</item>
+
+<item>
+<title>Arka Sokaklar Bölümler</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param3] Bölüm[/COLOR]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>https://[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  count=21;pn=1;data=[]
+  while pn <= int(count):
+    page='https://www.kanald.com.tr/arka-sokaklar/bolumler?page='+str(pn);source=requests.get(page).text
+    data +=re.findall('"bg-wrapper".+?href="/(.*?)".+?data.+?//(.*?)".alt="(.*?)\sB.+?id="([^"]+)',re.findall('class="kd-docs-thumbnails">(?s)(.*?)<li class="next',source)[0]);pn +=1
+  return  data
+]]></expres>
+<page>https://www.kanald.com.tr/arka-sokaklar/bolumler</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param3] Bölüm[/COLOR] (Eps. [makelist2.param2])</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>https://[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('href="(\?p=(\d+))"',re.findall('id="partPaginator">(?s)(.*?)</ul',page_data)[0])
+]]></expres>
+<page>https://www.kanald.com.tr/[makelist.param1]</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  source=requests.get('https://www.kanald.com.tr/actions/content/media/[makelist.param4][makelist2.param1]&pc=6',headers={'referer':'https://www.kanald.com.tr/[makelist.param1]'}).text.replace('\u0026','&')
+  inf=re.findall('"ServiceUrl":"(.*?)"."SecurePath":"([^"]+)',source)[0];m3u8=inf[0]+inf[1]
+  source=requests.get(m3u8,headers={'Referer':'https://www.kanald.com.tr/[makelist.param1][makelist2.param1]'}).text
+  if '1250000' in source:
+    return m3u8.replace('index','1000/prog_index')+'|Referer=https://www.kanald.com.tr/[makelist.param1][makelist2.param1]'
+  elif '1000000' in source:
+    return m3u8.replace('index','750/prog_index')+'|Referer=https://www.kanald.com.tr/[makelist.param1][makelist2.param1]'
+  elif '750000' in source:
+    return m3u8.replace('index','500/prog_index')+'|Referer=https://www.kanald.com.tr/[makelist.param1][makelist2.param1]'
+]]></expres>
 <page></page>
+</regex>
+<fanart>https://s.kanald.com.tr/ps/kanald/70/0x0/5b76bfd39850b90f6493ca2b.jpg</fanart>
+<thumbnail>https://s.kanald.com.tr/ps/kanald/70/0x0/5b76c02fd6684032ec29b256.png</thumbnail>
+</item>
+
+<item>
+<title>http://www.betestream4.com/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+   <title>([makelist.param3]) [COLOR gold][makelist.param2][/COLOR]</title>
+   <link>$doregex[getUrl]</link>
+  <thumbnail>http://www.betestream4.com/assets/uploads/settings/main_logo_987.gif</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[(?s)class="item.(?:f|h|t|b).*?href="(.*?)".title="([^"]+).+?time">(\d[^<]+)]]></expres>
+<page>http://www.betestream4.com/</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  source=requests.get(re.findall('id="player"[\w\W]*?src="([^"]+)',page_data)[0],headers={'User-Agent':'Mozilla/5.0','Referer':'http://www.betestream4.com/'}).content.decode('ascii','ignore')
+  return re.findall('source:"([^"]+)',re.findall('id="player"[\w\W]*?atob."([^"]+)',source)[0].decode('base64'))[0]+'|User-Agent=Mozilla/5.0&Referer=[makelist.param1]'
+]]></expres>
+<page>[makelist.param1]</page>
+</regex>
+<thumbnail>http://www.betestream4.com/assets/uploads/settings/main_logo_987.gif</thumbnail>
+</item>
+
+<item>
+<title>[COLOR white]footyandroid.com[/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+   <title>([makelist.param1]) [COLOR lime][makelist.param3][COLOR white] vs [COLOR lime][makelist.param4][/COLOR] [COLOR gold]| [makelist.param2] [/COLOR]</title>
+   <link>plugin://program.plexus/?mode=1&amp;name=[makelist.param3] vs [makelist.param4] em [makelists.param1]&amp;url=acestream://[makelist.param5]</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  list=re.findall('"start(?s)(.*?)\]',page_data)[0].replace('\\','')
+  return re.findall('datetime_utc":"(.+?)".+?:"(.*?)".+?team":"(.*?)".+?team":"(.*?)".+?acestream.+?(\w[^"\,]+)',list)
+]]></expres>
+<page>https://pastebin.com/raw/MUMdpL17</page>
+</regex>
+</item>
+
+<item>
+<title>http://fullmatchtv.com/index.php/nba/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param2] vs [makelist.param3][/COLOR] ([makelist.param4])</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist.param1]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests,urlresolver
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  data1={'action':'td_ajax_block','td_atts':'{"limit":"18","sort":"","post_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","category_id":"3","category_ids":"","custom_title":"Latest+NBA+games","custom_url":"","show_child_cat":"","sub_cat_ajax":"","ajax_pagination":"load_more","header_color":"","header_text_color":"","ajax_pagination_infinite_stop":"","td_column_number":2,"td_ajax_preloading":"","td_ajax_filter_type":"td_category_ids_filter","td_ajax_filter_ids":"","td_filter_default_txt":"All","color_preset":"","border_top":"","class":"td_uid_8_5bcdfda171c36_rand","el_class":"","offset":"","css":"","tdc_css":"","tdc_css_class":"td_uid_8_5bcdfda171c36_rand","tdc_css_class_style":"td_uid_8_5bcdfda171c36_rand_style","live_filter":"","live_filter_cur_post_id":"","live_filter_cur_post_author":"","block_template_id":""}','td_block_id':'td_uid_8_5bcdfda171c36','td_column_number':'2','td_current_page':'1','block_type':'td_block_16','td_filter_value':'','td_user_action':''}
+  data2={'action':'td_ajax_block','td_atts':'{"limit":"18","sort":"","post_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","category_id":"3","category_ids":"","custom_title":"Latest+NBA+games","custom_url":"","show_child_cat":"","sub_cat_ajax":"","ajax_pagination":"load_more","header_color":"","header_text_color":"","ajax_pagination_infinite_stop":"","td_column_number":2,"td_ajax_preloading":"","td_ajax_filter_type":"td_category_ids_filter","td_ajax_filter_ids":"","td_filter_default_txt":"All","color_preset":"","border_top":"","class":"td_uid_8_5bcdfda171c36_rand","el_class":"","offset":"","css":"","tdc_css":"","tdc_css_class":"td_uid_8_5bcdfda171c36_rand","tdc_css_class_style":"td_uid_8_5bcdfda171c36_rand_style","live_filter":"","live_filter_cur_post_id":"","live_filter_cur_post_author":"","block_template_id":""}','td_block_id':'td_uid_8_5bcdfda171c36','td_column_number':'2','td_current_page':'2','block_type':'td_block_16','td_filter_value':'','td_user_action':''}
+  data3={'action':'td_ajax_block','td_atts':'{"limit":"18","sort":"","post_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","category_id":"3","category_ids":"","custom_title":"Latest+NBA+games","custom_url":"","show_child_cat":"","sub_cat_ajax":"","ajax_pagination":"load_more","header_color":"","header_text_color":"","ajax_pagination_infinite_stop":"","td_column_number":2,"td_ajax_preloading":"","td_ajax_filter_type":"td_category_ids_filter","td_ajax_filter_ids":"","td_filter_default_txt":"All","color_preset":"","border_top":"","class":"td_uid_8_5bcdfda171c36_rand","el_class":"","offset":"","css":"","tdc_css":"","tdc_css_class":"td_uid_8_5bcdfda171c36_rand","tdc_css_class_style":"td_uid_8_5bcdfda171c36_rand_style","live_filter":"","live_filter_cur_post_id":"","live_filter_cur_post_author":"","block_template_id":""}','td_block_id':'td_uid_8_5bcdfda171c36','td_column_number':'2','td_current_page':'3','block_type':'td_block_16','td_filter_value':'','td_user_action':''}
+  source1=requests.post('http://fullmatchtv.com/wp-admin/admin-ajax.php?td_theme_name=Newspaper&v=8.5.1',headers={'User-Agent': 'Mozilla/5.0','Referer':'http://fullmatchtv.com/index.php/nba/','Accept':'*/*'},data=data1).text.replace('\\','')
+  source2=requests.post('http://fullmatchtv.com/wp-admin/admin-ajax.php?td_theme_name=Newspaper&v=8.5.1',headers={'User-Agent': 'Mozilla/5.0','Referer':'http://fullmatchtv.com/index.php/nba/','Accept':'*/*'},data=data2).text.replace('\\','')
+  source3=requests.post('http://fullmatchtv.com/wp-admin/admin-ajax.php?td_theme_name=Newspaper&v=8.5.1',headers={'User-Agent': 'Mozilla/5.0','Referer':'http://fullmatchtv.com/index.php/nba/','Accept':'*/*'},data=data2).text.replace('\\','')
+  return re.findall('src="(.*?)".alt="(.*?).at.(.*?)".+?&.+?\s(.*?)".+?href="([^"]+)',source1+source2+source3)
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,urlresolver
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return urlresolver.resolve(re.findall('<iframe.+?src="(.+streamango[^"]+)',requests.get('[makelist.param5]').text)[0])
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<title>http://filmzone.org/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param2][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist.param3]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  mdata=re.findall('(?s)"ico-post-film".+?href="(.*?)".+?>([^<]+).+?src="([^"]+)',page_data)
+  count=re.findall('>(\d+)<.*\n.*?&raquo',page_data)[0];pn=2;data=[]
+  while pn <= int(count):
+    page='http://filmzone.org/page/'+str(pn)+'/';source=requests.get(page).text
+    data +=re.findall('(?s)"ico-post-film".+?href="(.*?)".+?>([^<]+).+?src="([^"]+)',source);pn +=1
+  return mdata+data
+]]></expres>
+<page>http://filmzone.org/</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  source=requests.get('[makelist.param1]',headers={'Referer':'http://filmzone.org/','User-Agent':'Mozilla/5.0','Accept':'*/*'}).text
+  if '1080p' in source:
+    return re.findall('class="dl-link".*\n.*?href="(h.+?1080[^"]+)',source)[0]
+  else:
+    return re.findall('class="dl-link".*\n.*?href="(h.+?720[^"]+)',source)[0]
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>http://filmzone.org/wp-content/uploads/2018/07/FilmZone.png</thumbnail>
+</item>
+
+<item>
+<title>https://www.watchbox.de/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param2][/COLOR]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>https://www.watchbox.de/apple-touch-icon.png</thumbnail>
+  <info>[makelist.param3]</info>
+]]></listrepeat>
+<expres><![CDATA["genre-teaser".href="/(.*?)"[\w\W]*?"text_browse-teaser-title".*\n.*?(\w[^\s]+)[\w\W]*?teaser-subtitle".*\n.*?(\w.*?)\s*<]]></expres>
+<page>https://www.watchbox.de/genres/</page>
+<referer>https://www.watchbox.de/</referer>
+<agent>Mozilla/5.0</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist2.param1][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>https://[makelist2.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  source=requests.get('https://www.watchbox.de/[makelist.param1]',headers={'Referer':'https://www.watchbox.de/genres/','User-Agent':'Mozilla/5.0','Accept':'*/*'}).content.decode('ascii','ignore')
+  inf=re.findall('data-endpoint="/(.*?)".*\n.*?pageId":"(\d+)',source)[0]
+  headers={'Referer':'https://www.watchbox.de/[makelist.param1]','X-Requested-With':'XMLHttpRequest','User-Agent':'Mozilla/5.0','Accept':'*/*'}
+  count=8;pn=1;data=[]
+  while pn <= int(count):
+     page='https://www.watchbox.de/%s?page='%inf[0]+str(pn)+'&ajax=true&pageId=%s'%inf[1];source=requests.get(page,headers=headers).content.decode('ascii','ignore').replace('\\n','').replace('\\','')
+     data +=re.findall('(?s)data-asset-title="(.*?)".+?data-src="//(.*?)".*?href="/([^"]+)',source);pn +=1
+  return  data
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  source=requests.get('https://www.watchbox.de/[makelist2.param3]',headers={'Referer':'https://www.watchbox.de/[makelist.param1]','User-Agent':'Mozilla/5.0','Accept':'*/*'}).content.decode('ascii','ignore')
+  return re.findall('"hls":"([^"]+)',re.findall('id="player"(?s)(.*?)</div>',source)[0].replace('&quot;','"').replace('\\',''))[0]+'|User-Agent=iPad&Referer=https://www.watchbox.de/[makelist2.param3]'
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://www.watchbox.de/apple-touch-icon.png</thumbnail>
+</item>
+
+<item>
+<title>https://www.ecanlitvizle.live/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[makelist.param3]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):# streamwatcher2013
+  count=re.findall('.+page/(\d+)/".*\n.*class="ilantahtasi',requests.get('https://www.ecanlitvizle.live/').content)[0];pn=1;data=[]
+  while pn <= int(count):
+     page='https://www.ecanlitvizle.live/page/'+str(pn)+'/';data +=re.findall('href="(.*?)".*\n.*kanallarlogo".*?src="(.*?)".alt="(.*?)"',requests.get(page).content);pn +=1
+  return data
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):# streamwatcher2013
+  link=re.findall('<p><iframe.*?[\'"](htt.*?embed.*?)[\'"]',requests.get('[makelist.param1]',headers={'Referer':'https://www.ecanlitvizle.live/'}).content)[0];source=requests.get(link,headers={'Referer':'[makelist.param1]'}).content
+  if 'm3u8' in source:
+     return re.findall('[\'"](h.*?wmsAuthSign.*?)[\'"]',source)[0]+'|User-Agent=iPad'
+  elif 'token' in source:
+     source=requests.get(re.findall('[\'"](h.*(?:token).*?)[\'"]',source)[0],headers={'Referer':link}).content;return re.findall('[\'"](h.*(?:m3u8).*?)[\'"]',source)[0]+'|User-Agent=iPad'
+  else:
+     return 'plugin://plugin.video.youtube/play/?video_id=%s'%link
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://www.ecanlitvizle.live/images/logo.png</thumbnail>
+</item>
+
+<item>
+<title>http://kinoger.to/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param2][/COLOR] ([makelist.param3])</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist.param4]</thumbnail>
+  <info>[makelist.param5]</info>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests,xbmc,xbmcgui,xbmcaddon,time
+def GetLSProData(page_data, Cookie_Jar,m,itxt='Enter Movie Name:'):#streamwatcher2013
+  addon = xbmcaddon.Addon('plugin.video.live.streamspro')
+  addon_version = addon.getAddonInfo('version')
+  profile = xbmc.translatePath(addon.getAddonInfo('profile').decode('utf-8'))
+  solver = InputWindow(txt=itxt);solution= solver.get()
+  inf=re.findall('(?s)<form.method="post".+?value="(.*?)".+?value="(.*?)".+?value="(\d+)"',page_data)[0]
+  data={'do':inf[0],'subaction':inf[1],'titleonly':inf[2],'story':solution,'x':'4','y':'13','submit':'submit'}
+  source=requests.post('http://kinoger.to/',headers={'Referer':'http://kinoger.to/','User-Agent':'Mozilla/5.0'},data=data).text
+  list=re.findall('</table.*\n.*/form(?s)(.*?)"navigation"',source)[0]
+  return re.findall('(?s)<img src.+?href="(h.*?)">(.*?)\s\((\d+).+?src="(.*?)".+?</b>([^<]+)',list)
+
+class InputWindow(xbmcgui.WindowDialog):
+    def __init__(self, *args, **kwargs):
+        self.txt = kwargs.get('txt','')
+        xbmcgui.WindowXMLDialog.__init__(self)
+        #self.addControl(self.txt)
+        path = xbmcaddon.Addon().getAddonInfo('path')
+        self.kbd = xbmc.Keyboard()
+        self.kbd.setHeading( self.txt)
+    def get(self):
+        self.show()
+        time.sleep(2)
+        self.kbd.doModal()
+        if (self.kbd.isConfirmed()):
+            text = self.kbd.getText()
+            self.close()
+            return text
+        self.close()
+        return False
+]]></expres>
+<page>http://kinoger.to/</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  source=requests.get(re.findall('id="kinog-player"[\w\W]*?"(h[^"]+)',page_data)[0],headers={'referer':'[makelist.param1]','user-agent':'Mozilla/5.0','accept':'*/*'}).text
+  inf=re.findall('src="//((.+?)video[^"]+)',source)[0];url='http://%s'%inf[0]
+  source=requests.get(url,headers={'Referer':'[makelist.param1]','User-Agent':'Mozilla/5.0','Accept':'*/*'}).text
+  html='http://'+re.findall('media.+?[\'"]//([^\'"]+)',source)[0]
+  return requests.get(html,headers={'user-agent':'Mozilla/5.0','referer':'http://%s'%inf[1],'accept':'*/*'}).url+'|user-agent=ipad&referer=http://%s'%inf[1]
+]]></expres>
+<page>[makelist.param1]</page>
+<referer>http://kinoger.to/</referer>
+</regex>
+</item>
+
+<item>
+<title>http://blaxup.org/movies-list/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param3][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>https://[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  count=re.findall('>(\d+)<.*\n.*\.\.\.',page_data)[0];pn=1;data=[]
+  while pn <= int(count):
+    page='http://blaxup.org/movies-list/page/'+str(pn);source=requests.get(page).text
+    data +=re.findall('(?s)class="poster".+?href="(.*?)".+?src="(.*?)".alt="([^"]+)',re.findall('<section class="block(?s)(.*?)<nav',source)[0]);pn +=1
+  return  data
+]]></expres>
+<page>http://blaxup.org/movies-list/</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  source=requests.get('[makelist.param1]',headers={'Referer':'http://blaxup.org/movies-list/','User-Agent':'Mozilla/5.0','Accept':'*/*'}).text#content.decode('ascii','ignore')
+  if '1080' in source:
+    return re.findall('rel="nofollow".href="(.*?1080[^"]+)',source)[0]
+  else:
+    return re.findall('rel="nofollow".href="(.*?720[^"]+)',source)[0]
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+<item>
+<title>http://canlitvizle.com/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param2][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>http://canlitvizle.com/static/images/logo.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+ return re.findall('href="(.*?)".title="([^"]+)',re.findall('id="channels">(?s)(.*?)</ul',page_data)[0])
+]]></expres>
+<page>http://canlitvizle.com/</page>
+</regex>
+<regex>
+<name>link</name>
+<expres><![CDATA["player-inner"[\w\W]*?[\'"](h[^\'"]+)]]></expres>
+<page>[makelist.param1]</page>
+<referer>http://canlitvizle.com/</referer>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re
+from AADecoder import AADecoder
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+ inf=re.findall('script>([^<]+)[\w\W]*?file.+?\+[\'"]([^\'"]+)',page_data)[0]
+ html=re.findall("=\s*'([^']+).+?\s+'([^']+)",AADecoder(inf[0]).decode())[0]
+ return html[0]+inf[1]+html[1]+'|User-Agent=iPad&Referer=$doregex[link]'
+]]></expres>
+<page>$doregex[link]</page>
+<referer>[makelist.param1]</referer>
+</regex>
+<thumbnail>http://canlitvizle.com/static/images/logo.png</thumbnail>
+</item>
+
+<item>
+<title>https://www.watchbox.de/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param2][/COLOR]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>https://www.watchbox.de/apple-touch-icon.png</thumbnail>
+  <info>[makelist.param3]</info>
+]]></listrepeat>
+<expres><![CDATA["genre-teaser".href="/(.*?)"[\w\W]*?"text_browse-teaser-title".*\n.*?(\w[^\s]+)[\w\W]*?teaser-subtitle".*\n.*?(\w.*?)\s*<]]></expres>
+<page>https://www.watchbox.de/genres/</page>
+<referer>https://www.watchbox.de/</referer>
+<agent>Mozilla/5.0</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist2.param1][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>https://[makelist2.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  source=requests.get('https://www.watchbox.de/[makelist.param1]',headers={'Referer':'https://www.watchbox.de/genres/','User-Agent':'Mozilla/5.0','Accept':'*/*'}).content.decode('ascii','ignore')
+  inf=re.findall('data-endpoint="/(.*?)".*\n.*?pageId":"(\d+)',source)[0]
+  headers={'Referer':'https://www.watchbox.de/[makelist.param1]','X-Requested-With':'XMLHttpRequest','User-Agent':'Mozilla/5.0','Accept':'*/*'}
+  data=[]
+  urls=['https://www.watchbox.de/%s?page=1&ajax=true&pageId=%s'%(inf[0],inf[1]),'https://www.watchbox.de/%s?page=2&ajax=true&pageId=%s'%(inf[0],inf[1]),
+            'https://www.watchbox.de/%s?page=3&ajax=true&pageId=%s'%(inf[0],inf[1]),'https://www.watchbox.de/%s?page=4&ajax=true&pageId=%s'%(inf[0],inf[1]),
+            'https://www.watchbox.de/%s?page=5&ajax=true&pageId=%s'%(inf[0],inf[1]),'https://www.watchbox.de/%s?page=6&ajax=true&pageId=%s'%(inf[0],inf[1])]
+  for page in urls:
+    source=requests.get(page,headers=headers).content.decode('ascii','ignore').replace('\\n','').replace('\\','');data +=re.findall('(?s)data-asset-title="(.*?)".+?data-src="//(.*?)".*?href="/([^"]+)',source)
+  return data
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  source=requests.get('https://www.watchbox.de/[makelist2.param3]',headers={'Referer':'https://www.watchbox.de/[makelist.param1]','User-Agent':'Mozilla/5.0','Accept':'*/*'}).content.decode('ascii','ignore')
+  return re.findall('"hls":"([^"]+)',re.findall('id="player"(?s)(.*?)</div>',source)[0].replace('&quot;','"').replace('\\',''))[0]+'|User-Agent=iPad&Referer=https://www.watchbox.de/[makelist2.param3]'
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://www.watchbox.de/apple-touch-icon.png</thumbnail>
+</item>
+
+<item>
+<title>https://www.izletv5.pw</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param2][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>https://www.izletv5.pw/[makelist.param3]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+ data=[]
+ urls=['https://www.izletv5.pw/p1','https://www.izletv5.pw/p2','https://www.izletv5.pw/p3','https://www.izletv5.pw/p4']
+ for site in urls:
+    source=requests.get(site,headers={'User-Agent':'Mozilla/5.0'}).text;list=re.findall('class="main-grids">(?s)(.*?)"pagination',source)[0]
+    data +=re.findall('href="/(.*?)".title="(.*?)".+?src="/([^"]+)',list)
+ return data
+]]></expres>
+<page>https://www.izletv5.pw</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,base64
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  inf=re.findall('live."(.*?)"."(\d+)',page_data)[0]
+  source=requests.post('https://www.izletv5.pw/[makelist.param1]',headers={'Referer':'https://www.izletv5.pw/[makelist.param1]','User-Agent':'Mozilla/5.0'},data={'hash':inf[0],'id':inf[1]}).text
+  if '/' in source:
+    return base64.b64decode(re.findall('(.*)',source)[0][::-1]+'==')+'|User-Agent=iPad&Referer=https://www.izletv5.pw/[makelist.param1]'
+  else:
+    return base64.b64decode(re.findall('(.*)',source)[0][::-1].replace('_','/')+'==')+'|User-Agent=iPad&Referer=https://www.izletv5.pw/[makelist.param1]'
+]]></expres>
+<page>https://www.izletv5.pw/[makelist.param1]</page>
+<referer>https://www.izletv5.pw/</referer>
+</regex>
+</item>
+
+<item>
+<title>https://tumarcador.xyz/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param1][/COLOR] ([makelist.param2])</title>
+  <link>$doregex[getUrl]</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('data-title="Evento".*\n(.*)[\w\W]*?"Hora".*\n(.*)[\w\W]*?href="([^"]+)',re.findall('class="table">(?s)(.*?)<scrip',page_data)[0])
+]]></expres>
+<page>https://tumarcador.xyz/</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('Clappr.Player[\w\W]*?source.+[\'"](h[^\'"]+)',page_data)[0]+'|User-Agent=iPad&Referer=http://tumarcador.xyz/[makelist.param3]'
+]]></expres>
+<page>http://tumarcador.xyz/[makelist.param3]</page>
+<referer>http://tumarcador.xyz/</referer>
+</regex>
+</item>
+
+<item>
+<title>https://www.ultrabet.tv/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>([makelist.param3]) [COLOR gold][makelist.param2][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>https://www.ultrabet.tv/templates/canli-mac-izle/images/logo.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('href="/(.*?)".title="(.*?)".+?(?:live|time)">([^<]+)',re.findall('"channels scrollbar-outer list">(?s)(.*?)<section',page_data)[0])
+]]></expres>
+<page>https://www.ultrabet.tv/</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('source:"([^"]+)',requests.get(re.findall('id="player".+?src="([^"]+)',page_data)[0],headers={'Referer':'https://www.ultrabet.tv/[makelist.param1]'}).text)[0]+'|User-Agent=iPad&Referer='+re.findall('id="player".+?src="([^"]+)',page_data)[0]
+]]></expres>
+<page>https://www.ultrabet.tv/[makelist.param1]</page>
+<referer>https://www.ultrabet.tv/</referer>
+</regex>
+<thumbnail>https://www.ultrabet.tv/templates/canli-mac-izle/images/logo.png</thumbnail>
+</item>
+
+
+<item>
+<title>[COLOR white]WORLD IPTV SERVER [COLOR red](www.ultrabet.tv)[/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR yellow][makelist.param2][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('"item.*?[\w\W].*?href="(.+?)" title="(.+?)"',re.findall('channel-list">(?s)(.*?)</section>',page_data)[0])
+]]></expres>
+<page>https://www.ultrabet.tv/</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,urllib
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  r=requests.get('https://www.ultrabet.tv[makelist.param1]',headers={'Referer':'https://www.ultrabet.tv/','User-Agent':'Mozilla/5.0'},verify=False)
+  url=re.findall('id="player"[\w\W]*?src="([^"]+)',r.text)[0]
+  source=requests.get(url,headers={'Referer':'https://www.ultrabet.tv[makelist.param1]','User-Agent':'Mozilla/5.0'},cookies=r.cookies).text
+  return re.findall('source.+?[\'"]([^\'"]+)',source)[0]+'|User-Agent=iPad&Referer='+url
+]]></expres>
+<page></page>
+<referer></referer>
+</regex>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>http://betticket.tv/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR yellow][makelist.param2][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>http://betticket.tv/tvlogo.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('href=[\'"]/(.*?)[\'"].title=[\'"]([^\'"]+)',re.findall('scrollbar-outer list">(?s)(.*?)</section',page_data)[0])
+]]></expres>
+<page>http://betticket.tv/</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,urllib
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  r=requests.get('http://betticket.tv/[makelist.param1]',headers={'Referer':'http://betticket.tv/','User-Agent':'Mozilla/5.0'},verify=False)
+  url=re.findall('id="player"[\w\W]*?src="([^"]+)',r.text)[0]
+  source=requests.get(url,headers={'Referer':'http://betticket.tv/[makelist.param1]','User-Agent':'Mozilla/5.0'},cookies=r.cookies).text
+  return re.findall('var.source.+?[\'"]([^\'"]+)',source)[0]+'|User-Agent=iPad&Referer='+url
+]]></expres>
+<page></page>
+<referer></referer>
+</regex>
+<thumbnail>http://betticket.tv/tvlogo.png</thumbnail>
+</item>
+
+<item>
+<title>http://cablegratis.tv/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param3][/COLOR]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return re.findall('(?s)href="(.*?)".+?src="(.*?)".alt="([^"]+)',re.findall('class="canales">(?s)(.*?) </div>',page_data)[0])
+]]></expres>
+<page>http://cablegratis.tv/</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  inf=re.findall('id=[\'"](\d+)[\'"].+?src=[\'"](h[^\'"]+)',page_data)[0];url=re.findall('src=[\'"](h[^\'"]+)',requests.get(inf[1],verify=False).text)[0]+inf[0]
+  return re.findall('Clappr.Player[\w\W]*?[\'"](h[^\'"]+)',requests.get(url,headers={'Referer':'[makelist.param1]'},verify=False).text)[0]+'|User-Agent=iPad&Referer='+url
+]]></expres>
+<page>[makelist.param1]</page>
+<referer>http://cablegratis.tv/</referer>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+<item>
+<title>http://cablegratis.tv/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[COLOR gold][makelist.param3][/COLOR]</title>
+  <link>$doregex[getUrl]|User-Agent=iPad&amp;Referer=$doregex[getLink]$doregex[IDs]</link>
+  <thumbnail>[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  list=re.findall('class="canales">(?s)(.*?) </div>',page_data)[0]
+  return re.findall('(?s)href="(.*?)".+?src="(.*?)".alt="([^"]+)',list)
+]]></expres>
+<page>http://cablegratis.tv/</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[Clappr.Player[\w\W]*?[\'"](h[^\'"]+)]]></expres>
+<page>$doregex[getLink]$doregex[IDs]</page>
+<referer>[makelist.param1]</referer>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>getLink</name>
+<expres>src="([^']+)</expres>
+<page>https://player.limpi.tv/embed.js</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>IDs</name>
+<expres>id='(\d+)'.+?src=</expres>
+<page>[makelist.param1]</page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+<item>
+<title>http://dl.royamovie.com/Movie/Foreign/1397/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+   <title>[COLOR yellow][makelist.param2][/COLOR]</title>
+   <link>$doregex[makelist2]</link>
+]]></listrepeat>
+<expres><![CDATA[td><a href="(\d[^"]+).+?>(\d+)]]></expres>
+<page>http://dl.royamovie.com/Movie/Foreign/1397/</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+   <title>[COLOR gold][makelist2.param2][/COLOR]</title>
+   <link>$doregex[makelist3]</link>
+]]></listrepeat>
+<expres><![CDATA[td><a href="(\d[^"]+).+?>(\d+)]]></expres>
+<page>http://dl.royamovie.com/Movie/Foreign/1397/[makelist.param1]</page>
+</regex>
+<regex>
+<name>makelist3</name>
+<listrepeat><![CDATA[
+   <title>[COLOR yellow][makelist3.param2][/COLOR]</title>
+   <link>http://dl.royamovie.com/Movie/Foreign/1397/[makelist.param1][makelist2.param2]/[makelist3.param1]</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  list=re.findall('<tbody>(?s)(.*?)</tbody',page_data)[0]
+  return re.findall('href="(.+?[mkv|mp4])".title="(.+?\d+p)',list)
+]]></expres>
+<page>http://dl.royamovie.com/Movie/Foreign/1397/[makelist.param1][makelist2.param2]</page>
+<referer>http://dl.royamovie.com/Movie/Foreign/1397/[makelist.param1]</referer>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+<item>
+<title>http://french-stream.tv/xfsearch/qualit/HDLight/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[makelist.param2]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>http://french-stream.tv/templates/FRVDEV/images/logo.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[href="/(.+?/genre-\d.*?)".+?>(.*?)<]]></expres>
+<page>http://french-stream.tv/xfsearch/qualit/HDLight/</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[makelist2.param3]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist2.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  mdata=re.findall('(?s)class="short-poster.+?href="(.*?)".+?src=(h.*?)&.+?alt="([^"]+)',requests.get('http://french-stream.tv/[makelist.param1]').content.decode('ascii','ignore').replace('&#8217;','\''))
+  count=re.findall('.+>(\d+)</a>.<(?:span.class="nav_ext"|/span>)',requests.get('http://french-stream.tv/[makelist.param1]').content.decode('ascii','ignore'))[0];pn=2;data=[]
+  while pn <= int(count):
+     page='http://french-stream.tv/[makelist.param1]/page/'+str(pn)+'/';source=requests.get(page).content.decode('ascii','ignore')
+     data +=re.findall('(?s)class="short-poster.+?href="(.*?)".+?src=(h.*?)&.+?alt="([^"]+)',source);pn +=1
+  data=mdata+data
+  return data
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests
+from urlresolver.plugins.lib import jsunpack
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  IDs=re.findall('var.fields.+?[\'"]([^\'"]+).*\n.*\n.*\n.*?gGotop1',page_data)[-1]
+  packed=jsunpack.unpack(requests.get('http://cloudvid.co/embed-'+re.findall('id="tmp".+?&&(.*?)%s'%IDs[0],page_data)[0],headers={'user-agent':'Mozilla/5.0','referer':'[makelist2.param1]'}).content).replace('\\','')
+  return re.findall('file:"(h[^"]+).+?(?:7\d\d|4\d\d)',packed)[0]+'|user-agent=ipad'
+]]></expres>
+<page>[makelist2.param1]</page>
+</regex>
+<thumbnail>http://french-stream.tv/templates/FRVDEV/images/logo.png</thumbnail>
+</item>
+
+<item>
+<title>https://cinematuga.fun | URLResolver</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[makelist.param2]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>https://lh3.googleusercontent.com/-KOezE2C7Xck/VTBAy8dJB7I/AAAAAAAAAAU/DPwiweKzrb8/s139-Ic42/logo.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[cat-item-.+?href="(.*?)"[^>]+>([^<]+)]]></expres>
+<page>https://cinematuga.fun/</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[makelist2.param3] ([makelist2.param4])</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist2.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  mdata=re.findall('(?s)class="thumb".+?href="(.*?)".+?src="(.*?)".+?"([^"]+).*?"tag">(\d+)',requests.get('[makelist.param1]').content.decode('ascii','ignore').replace('&#8217;','\''))
+  count=re.findall('.+page/(\d+).+?label=.Last',requests.get('[makelist.param1]').content.decode('ascii','ignore'))[0];pn=2;data=[]
+  while pn <= int(count):
+     page='[makelist.param1]page/'+str(pn)+'/';source=requests.get(page).content.decode('ascii','ignore').replace('&#8217;','\'')
+     data +=re.findall('(?s)class="thumb".+?href="(.*?)".+?src="(.*?)".+?"([^"]+).*?"tag">(\d+)',source);pn +=1
+  data=mdata+data
+  return sorted(data,key=lambda k: k[3],reverse=True)
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,urlresolver
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  return urlresolver.resolve(re.findall('"movieplay"[\w\W]*?[\'"](h[^\'"]+)',page_data)[0])
+]]></expres>
+<page>[makelist2.param1]</page>
+</regex>
+</item>
+
+
+<item>
+<title>https://cinematuga.fun | ResolverURL</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[makelist.param2]</title>
+  <link>$doregex[makelist2]</link>
+  <thumbnail>https://lh3.googleusercontent.com/-KOezE2C7Xck/VTBAy8dJB7I/AAAAAAAAAAU/DPwiweKzrb8/s139-Ic42/logo.png</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[cat-item-.+?href="(.*?)"[^>]+>([^<]+)]]></expres>
+<page>https://cinematuga.fun/</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[makelist2.param3] ([makelist2.param4])</title>
+  <urlsolve>$doregex[getUrl]</urlsolve>
+  <thumbnail>[makelist2.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  mdata=re.findall('(?s)class="thumb".+?href="(.*?)".+?src="(.*?)".+?"([^"]+).*?"tag">(\d+)',requests.get('[makelist.param1]').content.decode('ascii','ignore').replace('&#8217;','\''))
+  count=re.findall('.+page/(\d+).+?label=.Last',requests.get('[makelist.param1]').content.decode('ascii','ignore'))[0];pn=2;data=[]
+  while pn <= int(count):
+     page='[makelist.param1]page/'+str(pn)+'/';source=requests.get(page).content.decode('ascii','ignore').replace('&#8217;','\'')
+     data +=re.findall('(?s)class="thumb".+?href="(.*?)".+?src="(.*?)".+?"([^"]+).*?"tag">(\d+)',source);pn +=1
+  data=mdata+data
+  return sorted(data,key=lambda k: k[3],reverse=True)
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA["movieplay"[\w\W]*?[\'"](h[^\'"]+)]]></expres>
+<page>[makelist2.param1]</page>
+</regex>
+</item>
+
+<item>
+<title>http://allcalidad.com/tag/2018/</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[makelist.param3]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist.param2]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests
+def GetLSProData(page_data,Cookie_Jar,m):
+  mdata=re.findall('ah-imagge".href="(.*?)".*?src="(.*?)".*?title="(.*?)"',page_data)
+  count=re.findall('page/(\d+)/.*\n.*"next page-numbers"',page_data)[0];pn=2;data=[]
+  while pn <= int(count):
+     page='http://allcalidad.com/tag/2018/page/'+str(pn)+'/';source=requests.get(page).content.decode('ascii','ignore')
+     data +=re.findall('ah-imagge".href="(.*?)".*?src="(.*?)".*?title="(.*?)"',source);pn +=1
+  return mdata+data
+]]></expres>
+<page>http://allcalidad.com/tag/2018/</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,urlresolver
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  if 'rapidvideo' in page_data:
+    url=re.findall('href="(.+rapid.*?)".class="btn btn-xs',page_data)[0]
+    source=requests.get(url,headers={'referer':'[makelist.param1]'}).text
+    if '1080' in source:
+      return re.findall('href="(.*?)".*\n.*1080',source)[0]
+    elif '720' in source:
+      return re.findall('href="(.*?)".*\n.*720',source)[0]
+  elif 'openload' in page_data:
+    return urlresolver.resolve(re.findall('href="(.+openload.*?)".class="btn btn-xs',page_data)[0])
+]]></expres>
+<page>[makelist.param1]</page>
+</regex>
+</item>
+
+
+<item>
+<title>http://www.matbet6.tv/tr/izle/bein-sport-1</title>
+<link>$doregex[url]|Referer=http://www.matbet6.tv/tr/channel/watch/bein-sport-1&amp;User-Agent=iPad</link>
+<regex>
+<name>url</name>
+<expres>source:"([^"]+)</expres>
+<page>$doregex[link]</page>
+</regex>
+<regex>
+<name>link</name>
+<expres>$pyFunction:base64.b64decode("$doregex[getlink]")</expres>
+<page></page>
+</regex>
+<regex>
+<name>getlink</name>
+<expres>atob."([^"]+)</expres>
+<page>http://www.matbet6.tv/tr/channel/watch/bein-sport-1</page>
+<referer>http://www.matbet6.tv/tr/izle/bein-sport-1</referer>
+<agent>Mozilla/5.0</agent>
+<cookieJar></cookieJar>
+</regex>
+</item>
+
+<item>
+<title>http://www.matbet6.tv/tr/izle/bein-sport-1</title>
+<link>$doregex[url]</link>
+<regex>
+<name>url</name>
+<expres><![CDATA[#$pyFunction
+import re,base64
+def GetLSProData(page_data, Cookie_Jar, m):
+  list=base64.b64decode(re.findall('atob."([^"]+)',page_data)[0])
+  return re.findall('source:"([^"]+)',base64.b64decode(re.findall('atob."([^"]+)',page_data)[0]))[0]+'|Referer=http://www.matbet6.tv/tr/channel/watch/bein-sport-1&User-Agent=iPad'
+]]></expres>
+<page>http://www.matbet6.tv/tr/channel/watch/bein-sport-1</page>
+<referer>http://www.matbet6.tv/tr/izle/bein-sport-1</referer>
+<agent>Mozilla/5.0</agent>
+<cookieJar></cookieJar>
 </regex>
 </item>
