@@ -32,7 +32,7 @@
 <thumbnail>NA</thumbnail>
 ]]></listrepeat>
 <expres>#EXTINF:.*,(.*?)\n.*(http.*m3u8)</expres>
-<page>https://raw.githubusercontent.com/leonardoricart/listasiptv/main/iptv</page>
+<page>https://cineboxplay.blogspot.com/2021/04/servidor-3.html</page>
 <referer>https://origin.topcanais.com/</referer>
 <x-forward></x-forward>
 <agent>Kodi/18.0</agent>
