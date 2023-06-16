@@ -1,5 +1,5 @@
 <item>
-<title>[COLOR lime][B]SEVIDOR 1[/B][/COLOR]</title>
+<title>[COLOR lime][B]SERVIDOR 1[/B][/COLOR]</title>
 <link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
@@ -22,7 +22,7 @@
 </item>
 
 <item>
-<title>[COLOR lime][B]SEVIDOR 2[/B][/COLOR]</title>
+<title>[COLOR lime][B]SERVIDOR 2[/B][/COLOR]</title>
 <link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
@@ -45,7 +45,7 @@
 </item>
 
 <item>
-<title>[COLOR lime][B]SEVIDOR 3[/B][/COLOR]</title>
+<title>[COLOR lime][B]SERVIDOR 3[/B][/COLOR]</title>
 <link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
@@ -68,7 +68,7 @@
 </item>
 
 <item>
-<title>[COLOR lime][B]SEVIDOR 4[/B][/COLOR]</title>
+<title>[COLOR lime][B]SERVIDOR 4[/B][/COLOR]</title>
 <link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
@@ -91,7 +91,7 @@
 </item>
 
 <item>
-<title>[COLOR lime][B]SEVIDOR 5[/B][/COLOR]</title>
+<title>[COLOR lime][B]SERVIDOR 5[/B][/COLOR]</title>
 <link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
