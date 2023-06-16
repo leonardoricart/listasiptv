@@ -91,10 +91,11 @@
 </item>
 
 <item>
-<title>[COLOR lime][B]SERVIDOR 5[/B][/COLOR]</title>
+<title>[COLOR lime][B]SERVIDOR 6[/B][/COLOR]</title>
 <link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
+<link></link>
 <listrepeat><![CDATA[
 <title>[makelist.param1]</title>
 <thumbnail>NA</thumbnail>
@@ -107,7 +108,7 @@
 </regex>
 <regex>
 <name>encodedurl</name>
-<expres>$pyFunction:urllib.quote_plus('[makelist.param2]')<expres>
+<expres>('[makelist.param2]')<expres>
 <page></page>
 </regex>
 </item>
