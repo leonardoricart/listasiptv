@@ -92,12 +92,12 @@
 
 <item>
 <title>[COLOR lime][B]SEVIDOR 5[/B][/COLOR]</title>
-<link></link>
+<link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
 <listrepeat><![CDATA[
-<title></title>
-<link></link>
+<title>[makelist.param1]</title>
+<link>$doregex[encodedurl]</link>
 <thumbnail>NA</thumbnail>
 ]]></listrepeat>
 <expres>#EXTINF:.*,(.*?)\n.*(http.*m3u8)</expres>
@@ -108,7 +108,7 @@
 </regex>
 <regex>
 <name>encodedurl</name>
-<expres><expres>
+<expres>$pyFunction:urllib.quote_plus('[makelist.param2]')<expres>
 <page></page>
 </regex>
 </item>
