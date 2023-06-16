@@ -91,13 +91,12 @@
 </item>
 
 <item>
-<title>[COLOR lime][B]SERVIDOR 5 TV ABERTA[/B][/COLOR]</title>
-<link></link>
+<title>[COLOR lime][B]SERVIDOR 5[/B][/COLOR]</title>
+<link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
 <listrepeat><![CDATA[
 <title>[makelist.param1]</title>
-<link></link>
 <thumbnail>NA</thumbnail>
 ]]></listrepeat>
 <expres>#EXTINF:.*,(.*?)\n.*(http.*m3u8)</expres>
