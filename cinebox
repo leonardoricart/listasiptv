@@ -89,3 +89,26 @@
 <page></page>
 </regex>
 </item>
+
+<item>
+<title>[COLOR lime][B]SEVIDOR 5[/B][/COLOR]</title>
+<link></link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title></title>
+<link></link>
+<thumbnail>NA</thumbnail>
+]]></listrepeat>
+<expres>#EXTINF:.*,(.*?)\n.*(http.*m3u8)</expres>
+<page>https://cineboxplay.blogspot.com/2023/06/servidor-5.html</page>
+<referer></referer>
+<x-forward></x-forward>
+<agent>Kodi/18.0</agent>
+</regex>
+<regex>
+<name>encodedurl</name>
+<expres><expres>
+<page></page>
+</regex>
+</item>
