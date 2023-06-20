@@ -23,7 +23,7 @@
 <fanart></fanart>
 ]]></listrepeat>
 <expres>EXTINF.*?,(.*?)\nacestream://(.*)</expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
+<page>https://pastebin.com/raw/C45ChzFN</page>
 <agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
 </regex>
 	<thumbnail></thumbnail>
@@ -44,7 +44,7 @@
 <fanart></fanart>
 ]]></listrepeat>
 <expres><![CDATA[location>(.*?acelive)<[\w\W\s]{0,30}title>(.*?)<]]></expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
+<page>https://pastebin.com/raw/C45ChzFN</page>
 <referer></referer>
  
 </regex>
@@ -69,7 +69,7 @@
  <fanart></fanart>
  ]]></listrepeat>
 <expres>Server:"(.*?)" URL="(.*?)"; regex"(.*?)"</expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
+<page>https://pastebin.com/raw/C45ChzFN</page>
 <agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
 </regex>
 <regex>
@@ -99,7 +99,7 @@
 <title>EDOCTOR</title>
 <link>rs</link>
 <thumbnail></thumbnail>
-<externallink>https://teste746422.blogspot.com/2023/06/teste.html</externallink>
+<externallink>https://pastebin.com/raw/C45ChzFN</externallink>
 <fanart></fanart>
 <info>JHGMASTER LISTAS IPTV</info>
 </item>
@@ -108,7 +108,7 @@
 <title>FLUXUSTV</title>
 <link>rs</link>
 <thumbnail></thumbnail>
-<externallink>https://teste746422.blogspot.com/2023/06/teste.html</externallink>
+<externallink>https://pastebin.com/raw/C45ChzFN</externallink>
 <fanart></fanart>
 <info>JHGMASTER LISTAS IPTV</info>
 </item>
@@ -130,7 +130,7 @@
     <externallink>[makelist.param1][DE]$$TSDOWNLOADER$$</externallink>
 ]]></listrepeat>
 <expres>>(http:\/\/(.*?)\/.*?get.php.*?)&lt;</expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
+<page>https://pastebin.com/raw/C45ChzFN</page>
 <referer></referer>
 <cookieJar></cookieJar>
 </regex>
@@ -154,7 +154,7 @@
 <link>$doregex[makelist2]</link>
 ]]></listrepeat>
 <expres>(http://(.*)/.*)</expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
+<page>https://pastebin.com/raw/C45ChzFN</page>
 <agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
 </regex>
  
@@ -196,7 +196,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
   channels = re.findall('<a href="(.*?)".*?>(.*?)<.*?live">(.*?)<',page_data)
   return sorted(channels)
 ]]></expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
+<page>https://pastebin.com/raw/C45ChzFN</page>
 </regex>
 <regex>
 <name>get-url</name>
@@ -304,7 +304,7 @@ def GetLSProData(page_data,Cookie_Jar,m,url='https://beta.ustreamix.com/[makelis
 <fanart></fanart>
  ]]></listrepeat>
 <expres>Server:"(.*?)" URL="(.*?)"; regex"(.*?)"</expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
+<page>https://pastebin.com/raw/C45ChzFN</page>
 <agent>Kodi/15.2 (Windows NT 6.1) App_Bitness/32 Version/15.2-Git:20151019-02e7013</agent>
 </regex>
 <regex>
@@ -350,13 +350,13 @@ def GetLSProData(page_data,Cookie_Jar,m,):
   first_c = re.findall("x_first_c.+?'(.*?)'", page_data)[0]
   ket2 = re.findall("ket2.+?'(.*?)'", page_data)[0]
   first_ua = re.findall("x_first_ua.+?'(.*?)'", page_data)[0]
-  preurl = 'https://teste746422.blogspot.com/2023/06/teste.html'   # here is the server url which changed most of time
+  preurl = 'https://pastebin.com/raw/C45ChzFN'   # here is the server url which changed most of time
   url = preurl + 'stats.php?p=' + first_ip + '&C=' + first_c + '&Ket=' + ket2
   source = requests.get(url, headers = {'Referer': 'http://www.newtvworld.com/livetv/india/DiscoveryChannel.html/[makelist.param1]', 'User-Agent': first_ua, 'Accept': '*/*'}).text
   tok = re.findall('var jdtk="(.*?)"', source)[0]
   return preurl + 'tmg.m3u8?' + '[makelist.param1]' + '&token=' + tok
 ]]></expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html[makelist.param1]</page>
+<page>https://pastebin.com/raw/C45ChzFN[makelist.param1]</page>
 <agent>Mozilla/5.0 (X11; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0 Iceweasel/44.0</agent>
 <cookieJar></cookieJar>
 </regex>
@@ -371,7 +371,7 @@ def GetLSProData(page_data,Cookie_Jar,m,):
 <title>DiarLima (IPTV) BRASIL </title>
 <link>rs</link>
 <thumbnail></thumbnail>
-<externallink>https://teste746422.blogspot.com/2023/06/teste.html</externallink>
+<externallink>https://pastebin.com/raw/C45ChzFN</externallink>
 <fanart></fanart>
 <info>JHGMASTER LISTAS IPTV</info>
 </item>
@@ -393,7 +393,7 @@ def GetLSProData(page_data,Cookie_Jar,m,):
 <externallink>[makelist.param1][DE]$$TSDOWNLOADER$$</externallink>
 ]]></listrepeat>
 <expres>>(http:\/\/(.*?)\/.*?get.php.*?)&lt;</expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
+<page>https://pastebin.com/raw/C45ChzFN</page>
 <referer></referer>
 <cookieJar></cookieJar>
 </regex>
@@ -418,7 +418,7 @@ item>
    <link>$doregex[makelist2]</link>
 ]]></listrepeat>
 <expres><![CDATA[href="([^"]+)">(.*?)</a]]></expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
+<page>https://pastebin.com/raw/C45ChzFN</page>
 </regex>
 <regex>
 <name>makelist2</name>
@@ -460,7 +460,7 @@ item>
     <externallink>[makelist.param1][DE]$$TSDOWNLOADER$$</externallink>
 ]]></listrepeat>
 <expres>(http:\/\/orbit-iptv.com:2500\/.*?get.php.*?)&lt;</expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
+<page>https://pastebin.com/raw/C45ChzFN</page>
 <referer></referer>
 <cookieJar></cookieJar>
 </regex>
@@ -483,7 +483,7 @@ item>
 <fanart></fanart>
  ]]></listrepeat>
 <expres><![CDATA[post-title entry-title[\w\W\s]{0,23}href='(.*?)'>Daily m3u playlist (.*?)2017]]></expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
+<page>https://pastebin.com/raw/C45ChzFN</page>
 </regex>
 </regex>
 <regex>
@@ -533,7 +533,7 @@ item>
 <fanart></fanart>
  ]]></listrepeat>
 <expres><![CDATA[post-title entry-title[\w\W\s]{0,23}href='(.*?)'>(.*?)<]]></expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
+<page>https://pastebin.com/raw/C45ChzFN</page>
 </regex>
 
 
@@ -570,7 +570,7 @@ item>
 <fanart></fanart>
  ]]></listrepeat>
 <expres><![CDATA[post-title entry-title[\w\W\s]{0,23}href='(.*?)'>(.*?)<]]></expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
+<page>https://pastebin.com/raw/C45ChzFN</page>
 </regex>
 
 
@@ -608,7 +608,7 @@ item>
 <fanart></fanart>
  ]]></listrepeat>
 <expres><![CDATA[post-title entry-title[\w\W\s]{0,10}href='(.*?)'>\n(.*?)\n<]]></expres>
-<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
+<page>https://pastebin.com/raw/C45ChzFN</page>
 </regex>
 
 
