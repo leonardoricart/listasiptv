@@ -8,7 +8,7 @@ item>
    <link>$doregex[makelist2]</link>
 ]]></listrepeat>
 <expres><![CDATA[href="([^"]+)">(.*?)</a]]></expres>
-<page>http://mac-keyf-3.pw:8080/get.php?username=sJELE33kgS&password=QCAxqDw7we&type=m3u_plus</page>
+<page>https://teste746422.blogspot.com/2023/06/teste.html</page>
 </regex>
 <regex>
 <name>makelist2</name>
