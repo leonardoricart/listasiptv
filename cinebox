@@ -92,7 +92,7 @@
 
 
 <item>
-<title>[COLOR lime][B]SERVIDOR 55[/B][/COLOR]</title>
+<title>[COLOR brue][B]SERVIDOR 57[/B][/COLOR]</title>
 <link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
@@ -101,7 +101,7 @@
 <link>plugin://plugin.video.f4mTester/?streamtype=TSDOWNLOADER&amp&amp;name=[makelist.param1]&amp;url=$doregex[encodedurl]</link>
 <thumbnail>NA</thumbnail>
 ]]></listrepeat>
-<expres>#EXTINF:-1,(.*?)\n(.*)</expres>
+<expres>#EXTINF:-1,[makelist.param1](.*?)\n(.*)</expres>
 <page>https://pastebin.com/raw/C45ChzFN</page>
 <referer></referer>
 <x-forward></x-forward>
