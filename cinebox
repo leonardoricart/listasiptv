@@ -91,42 +91,26 @@
 </item>
 
 
-
-
 <item>
-<title>SERVIDOR 5</title>
+<title>[COLOR lime][B]SERVIDOR 55[/B][/COLOR]</title>
 <link>$doregex[makelist]</link>
-<fanart></fanart>
-<regex>
-<name>makelist2</name>
-<listrepeat><![CDATA[
- <title>[COLOR red][B]DIABLO[/B][/COLOR][COLOR green][B]5.0[/B][/COLOR] [makelist2.param1]</title>
- <link>$doregex[makelist]</link>
-<thumbnail></thumbnail>
-<fanart></fanart>
- ]]></listrepeat>
-<expres>#EXTINF:-1,[makelist2.param3](.*?)\n(.*)</expres>
-<page>https://pastebin.com/raw/C45ChzFN</page>
-<referer></referer>
-<agent>Kodi/18.0</agent>
-</regex>
 <regex>
 <name>makelist</name>
 <listrepeat><![CDATA[
- <title>[COLOR red][B]DIABLO[/B][/COLOR][COLOR green][B]5.0[/B][/COLOR] [COLOR darkcyan][makelist.param1][/COLOR]</title>
- <link>plugin://plugin.video.f4mTester/?url=[makelist.param2]&amp;streamtype=TSDOWNLOADER&amp;maxbitrate=0&amp;proxy=None&amp;name=[COLOR blue]RS[/COLOR]IPTV[makelist.param1]</link>
-<thumbnail></thumbnail>
-<fanart></fanart>
- ]]></listrepeat>
-<expres>$pyFunction:urllib.quote_plus('[makelist.param2]')</expres>
-<page></page>
+<title>[makelist.param1]</title>
+<link>plugin://plugin.video.f4mTester/?streamtype=TSDOWNLOADER&amp&amp;name=[makelist.param1]&amp;url=$doregex[encodedurl]</link>
+<thumbnail>NA</thumbnail>
+]]></listrepeat>
+<expres>#EXTINF:-1,(.*?)\n(.*)</expres>
+<page>https://pastebin.com/raw/C45ChzFN</page>
+<referer></referer>
+<x-forward></x-forward>
 <agent>Kodi/18.0</agent>
 </regex>
-<thumbnail></thumbnail>
-<fanart></fanart>
-<info>LISTAS IPTV</info>
+<regex>
+<name>encodedurl</name>
+<expres>$pyFunction:urllib.quote_plus('[makelist.param2]')<expres>
+<page></page>
+</regex>
 </item>
-
-
-
 
