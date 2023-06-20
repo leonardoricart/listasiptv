@@ -90,27 +90,3 @@
 </regex>
 </item>
 
-
-<item>
-<title>[COLOR ][B]SERVIDOR 60[/B][/COLOR]</title>
-<link>$doregex[makelist]</link>
-<regex>
-<name>makelist</name>
-<listrepeat><![CDATA[
-<title>[makelist.param1]</title>
-<link>plugin://plugin.video.f4mTester/?streamtype=TSDOWNLOADER&amp&amp;name=[makelist.param1]&amp;url=$doregex[encodedurl]</link>
-<thumbnail>NA</thumbnail>
-]]></listrepeat>
-<expres>#EXTINF:.*,(.*?)\n.*(http.*m3u8.*ts)</expres>
-<page>https://pastebin.com/raw/C45ChzFN</page>
-<referer></referer>
-<x-forward></x-forward>
-<agent>Kodi/18.0</agent>
-</regex>
-<regex>
-<name>encodedurl</name>
-<expres>$pyFunction:urllib.quote_plus('[makelist.param2]')<expres>
-<page></page>
-</regex>
-</item>
-
