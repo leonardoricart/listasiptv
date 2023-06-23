@@ -10,6 +10,13 @@
 <info>kodi</info>
 </channel>
 
-
+<channels>
+<channel>
+<name>[B][COLOR lime]●[/COLOR] [COLOR white]SERVIDOR 2 [/COLOR][/B]</name>
+<thumbnail>https://img.apkgit.co/20/com.m.f.player/1.0.4/icon.png</thumbnail>
+<externallink>https://cineboxplay.blogspot.com/2021/04/servidor-2.html</externallink>
+<fanart>https://vivaocredito.com.br/wp-content/uploads/2021/08/assistir-tv-online-gratis-1024x576.jpg</fanart>
+<info>kodi</info>
+</channel>
 
 </channels>
