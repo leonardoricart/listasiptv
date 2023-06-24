@@ -51,10 +51,10 @@
 <name>makelist</name>
 <listrepeat><![CDATA[
 <title>[makelist.param1]</title>
-<link>[makelist.param1]$doregex[encodedurl]</link>
+<link>plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=[makelist.param1]&amp;url=$doregex[encodedurl]</link>
 <thumbnail>NA</thumbnail>
 ]]></listrepeat>
-<expres>#EXTINF:.*,(.*?)\n.*(http.)</expres>
+<expres>#EXTINF:.*,(.*?)\n.*(http.*m3u8)</expres>
 <page>https://teste746422.blogspot.com/2023/06/teste.html</page>
 <referer>https://ntuplay.xyz/</referer>
 <x-forward></x-forward>
