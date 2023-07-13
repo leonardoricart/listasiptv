@@ -1,0 +1,106 @@
+#EXTM3U
+
+#EXTINF:-1,AWTV
+https://ebocast.ebosystems.com.br:3070/live/awtvlive.m3u8
+#EXTINF:-1,Lavras CE
+https://stmv1.srvstm.com/igor8605/igor8605/chunklist_w1418367618.m3u8
+
+#EXTINF:-1,Premiere Clubes
+http://superblazer.com.br.global.prod.fastly.net/live/premiereclubes/play2.m3u8
+
+#EXTINF:-1,Premiere 2
+http://superblazer.com.br.global.prod.fastly.net/live/premiere2/play2.m3u8
+
+#EXTINF:-1,Premiere 3
+http://superblazer.com.br.global.prod.fastly.net/live/premiere3/play2.m3u8
+
+#EXTINF:-1,Premiere 4
+http://superblazer.com.br.global.prod.fastly.net/live/premiere4/play2.m3u8
+
+#EXTINF:-1,Premiere 5
+http://superblazer.com.br.global.prod.fastly.net/live/premiere5/play2.m3u8
+
+#EXTINF:-1,Premiere 6
+http://superblazer.com.br.global.prod.fastly.net/live/premiere6/play2.m3u8
+
+#EXTINF:-1,Premiere 7
+http://superblazer.com.br.global.prod.fastly.net/live/premiere7/play2.m3u8
+
+#EXTINF:-1,Sportv
+http://superblazer.com.br.global.prod.fastly.net/live/sportv/play2.m3u8
+
+#EXTINF:-1,Sportv 2
+http://superblazer.com.br.global.prod.fastly.net/live/sportv2/play2.m3u8
+
+
+#EXTINF:-1,Sportv 3
+http://superblazer.com.br.global.prod.fastly.net/live/sportv3/play2.m3u8
+
+
+#EXTINF:-1,Espn
+http://superblazer.com.br.global.prod.fastly.net/live/espn/play2.m3u8
+
+#EXTINF:-1,Espn 2
+http://superblazer.com.br.global.prod.fastly.net/live/espn2/play2.m3u8
+
+#EXTINF:-1,Espn 3
+http://superblazer.com.br.global.prod.fastly.net/live/espn3/play2.m3u8
+
+#EXTINF:-1,Espn 4
+http://superblazer.com.br.global.prod.fastly.net/live/espn4/play2.m3u8
+
+#EXTINF:-1,Tnt
+http://superblazer.com.br.global.prod.fastly.net/live/tnt/play2.m3u8
+
+#EXTINF:-1,Space
+http://superblazer.com.br.global.prod.fastly.net/live/space/play2.m3u8
+
+#EXTINF:-1,Megapix
+http://superblazer.com.br.global.prod.fastly.net/live/megapix/play2.m3u8
+
+#EXTINF:-1,Fx
+http://superblazer.com.br.global.prod.fastly.net/live/fx/play2.m3u8
+
+#EXTINF:-1,TC Action
+http://superblazer.com.br.global.prod.fastly.net/live/telecineaction/play2.m3u8
+
+#EXTINF:-1,TC Pipoca
+http://superblazer.com.br.global.prod.fastly.net/live/telecinepipoca/play2.m3u8
+
+#EXTINF:-1,TC Premium
+http://superblazer.com.br.global.prod.fastly.net/live/telecinepremium/play2.m3u8
+
+#EXTINF:-1,Band
+http://superblazer.com.br.global.prod.fastly.net/live/band/play2.m3u8
+
+#EXTINF:-1,Record
+http://superblazer.com.br.global.prod.fastly.net/live/record/play2.m3u8
+
+#EXTINF:-1,Globo
+http://superblazer.com.br.global.prod.fastly.net/live/globo/play2.m3u8
+
+#EXTINF:-1,Hbo
+http://superblazer.com.br.global.prod.fastly.net/live/hbo/play2.m3u8
+
+#EXTINF:-1,Hbo2
+http://superblazer.com.br.global.prod.fastly.net/live/hbo2/play2.m3u8
+
+#EXTINF:-1,Axn
+http://superblazer.com.br.global.prod.fastly.net/live/axn/play2.m3u8
+
+#EXTINF:-1,A&E
+http://superblazer.com.br.global.prod.fastly.net/live/ae/play2.m3u8
+
+#EXTINF:-1,Viva
+http://superblazer.com.br.global.prod.fastly.net/live/viva/play2.m3u8
+
+#EXTINF:-1,Record
+https://cdn.jmvstream.com/w/LVW-10842/LVW10842_513N26MDBL/chunklist.m3u8
+#EXTINF:-1,Sbt
+https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u8
+#EXTINF:-1,Globo
+http://191.37.250.169:8801/live/NSC/720p.m3u8
+#EXTINF:-1,RedeTV - TV Pampa
+https://59f1cbe63db89.streamlock.net:1443/tvpampa/_definst_/tvpampa/chunklist_w388948239.m3u8
+#EXTINF:-1,TV Cultura
+https://5b33b873179a2.streamlock.net:1443/live/livestream/chunklist_w884249386.m3u8
