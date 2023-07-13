@@ -1,5 +1,10 @@
 #EXTM3U
 
+#EXTINF:-1,PFC HD
+#EXTVLCOPT:http-referrer=https://embedflix.net/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
+https://br.embedflix.net/p2p/prfc1_720p/chunks.m3u8
+
 #EXTINF:-1,AWTV
 https://ebocast.ebosystems.com.br:3070/live/awtvlive.m3u8
 #EXTINF:-1,Lavras CE
