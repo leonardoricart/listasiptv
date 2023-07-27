@@ -1,5 +1,58 @@
 #EXTM3U
 
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",Sportv
+https://bal01.vivartec.com.br:8088/hls/livechannel5.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",CLARO_SPORTS
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(CLARO_SPORTS_LATAM)/index.m3u8
+#EXTINF:-1,Espn
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(ESPN)/index.m3u8
+#EXTINF:-1,espn2
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(ESPN2)/index.m3u8
+#EXTINF:-1,espn3
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(ESPN3)/index.m3u8
+#EXTINF:-1,espn premium
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(FOX_SPORTS_PREMIUM)/index.m3u8
+#EXTINF:-1,fox sports
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(FOX_SPORTS)/index.m3u8
+#EXTINF:-1,tnt sports
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(TNT_SPORTS)/index.m3u8
+#EXTINF:-1,tyc sports
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(TYC_SPORTS)/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",Rai Italia
+https://d1wwtskvr1r98k.cloudfront.net/out/v1/3227670cd4b24b798a3918c5e52b61f0/index_1.m3u8
+#EXTINF:-1,Premiere Clubes (Vip)
+http://megablaze.com.global.prod.fastly.net/live/premiereclubes/play2.m3u8
+#EXTINF:-1,Premiere 2 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/premiere2/play2.m3u8
+#EXTINF:-1,Premiere 3 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/premiere3/play2.m3u8
+#EXTINF:-1,Premiere 4 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/premiere4/play2.m3u8
+#EXTINF:-1,Premiere 5 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/premiere5/play2.m3u8
+#EXTINF:-1,Premiere 6 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/premiere6/play2.m3u8
+#EXTINF:-1,Premiere 7 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/premiere7/play2.m3u8
+#EXTINF:-1,Sportv (Vip)
+http://megablaze.com.global.prod.fastly.net/live/sportv/play2.m3u8
+#EXTINF:-1,Sportv 2 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/sportv2/play2.m3u8
+#EXTINF:-1,Sportv 3 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/sportv3/play2.m3u8
+#EXTINF:-1,Espn (Vip)
+http://megablaze.com.global.prod.fastly.net/live/espn/play2.m3u8
+#EXTINF:-1,Espn 2 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/espn2/play2.m3u8
+#EXTINF:-1,Espn 3 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/espn3/play2.m3u8
+#EXTINF:-1,Espn 4 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/espn4/play2.m3u8
+#EXTINF:-1,Tnt (Vip)
+http://megablaze.com.global.prod.fastly.net/live/tnt/play2.m3u8
+#EXTINF:-1,Band sports Vip
+https://cdn2.connectbr.com.br/Band-Sports/index.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",Globo Ceara
 https://live-01.edge-atel-pnz-pe.video.globo.com:443/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJnbG9ib0lkIjoiZGM0NzcyOTQtY2RmYS00MTU3LTlkOGMtZTBkZTc0YmFhMGJlIiwgInVzZXJOYW1lIjoiQ2xheXRvbiBNb2RzIiwgInBob3RvVXJsIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKd3daN0g2eVhOQTk3U2txY1plZ2pKWW40Q1ZLNndJb2tXczlPTGY9czk2LWMifQ.V3hsbeZGGc6uQKVK3j1hmZSAykfEgmaH7cRzqXt08ky8naEvikirtTlR63LBJDTtDg5JHA6UpjAEVvhUm9_bmlc5dHCDykJEBZzNX0yFVCpTAx8UtsaJRFofcjrOG1jmNJ3RSkgodob7_9YDWHW_TFjmhYxphrUCGQ_Rnak7qfY9sHWx52hWus-dsDHELmOqW4Wje571AnQUppN8AUHKcWMXsrfy92a4TbvC8SOPv7u5SwakupVF1F2oDFH_CxYmB7UF1SxLjGZgv6iwMh7F_VONGQa587vgCS8qI8E_W4PWKigPElvzQ3_RlnnOWHhmZpH07_fckjlRxYLK3fEN0lw/nu/f(bMax=3300000,bMin=2000,i=2)/globo-ce1/globo-ce1-audio_1=96000-video=558976.m3u8
 
@@ -8,6 +61,22 @@ https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV Vila Real (Record MT) HD
 https://cdn.jmvstream.com/w/LVW-10842/LVW10842_513N26MDBL/chunklist.m3u8
+
+
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",Lavras Ce Tv
+https://stmv1.srvstm.com/igor8605/igor8605/playlist.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV Centro Sul
+https://5a0c3936c25c8.streamlock.net/tvcentrosultvstation/tvcentrosultvstation/playlist.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",Tv Tremembé
+https://video05.logicahost.com.br/tvtremembe/tvtremembe/chunklist_w1934747615.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV Aurora
+https://stream.skyspace.com.br:3466/stream/play.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",Cariri TV
+https://video05.logicahost.com.br/cariritv/cariritv/chunklist_w10738583.m3u8
 
 #EXTINF:-1 tvg-id="1001Noites.br" tvg-logo="https://i.imgur.com/dWA9y2J.png" group-title="Shop",1001 Noites (720p) [Not 24/7]
 https://cdn.jmvstream.com/w/LVW-8155/ngrp:LVW8155_41E1ciuCvO_all/playlist.m3u8
