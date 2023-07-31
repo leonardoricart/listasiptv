@@ -1,5 +1,7 @@
 #EXTM3U
 
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",LR TV WEBTV
+https://tgn.bozztv.com/ssh101/ssh101/tvleo/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",Sportv
 https://bal01.vivartec.com.br:8088/hls/livechannel5.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",CLARO_SPORTS
