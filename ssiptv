@@ -1,131 +1,86 @@
 #EXTM3U
 
-#EXTINF:-1,PFC
+#EXTINF:-1,Premiere Clubes (Vip)
+http://megablaze.com.global.prod.fastly.net/live/premiereclubes/play2.m3u8
+#EXTINF:-1,Premiere 2 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/premiere2/play2.m3u8
+#EXTINF:-1,Premiere 3 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/premiere3/play2.m3u8
+#EXTINF:-1,Premiere 4 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/premiere4/play2.m3u8
+#EXTINF:-1,Premiere 5 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/premiere5/play2.m3u8
+#EXTINF:-1,Premiere 6 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/premiere6/play2.m3u8
+#EXTINF:-1,Premiere 7 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/premiere7/play2.m3u8
+#EXTINF:-1,Sportv (Vip)
+http://megablaze.com.global.prod.fastly.net/live/sportv/play2.m3u8
+#EXTINF:-1,Sportv 2 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/sportv2/play2.m3u8
+#EXTINF:-1,Sportv 3 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/sportv3/play2.m3u8
+#EXTINF:-1,Espn (Vip)
+http://megablaze.com.global.prod.fastly.net/live/espn/play2.m3u8
+#EXTINF:-1,Espn 2 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/espn2/play2.m3u8
+#EXTINF:-1,Espn 3 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/espn3/play2.m3u8
+#EXTINF:-1,Espn 4 (Vip)
+http://megablaze.com.global.prod.fastly.net/live/espn4/play2.m3u8
+#EXTINF:-1,Tnt (Vip)
+http://megablaze.com.global.prod.fastly.net/live/tnt/play2.m3u8
+#EXTINF:-1,Band sports Vip
+https://cdn2.connectbr.com.br/Band-Sports/index.m3u8
+
+#EXTINF:-1,PFC embendflix
 #EXTVLCOPT:http-referrer=https://embedflix.net/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
 https://hls.embedflix.net/p2p/prfc1/playlist.m3u8
 
-
-#EXTINF:-1,SPORTV FUTMAIS
+#EXTINF:-1,SPORTV site FUTMAIS
 #EXTVLCOPT:http-referrer=https://links.brcdn.live/canais/opcao1.php?id=canal1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
 https://brasil2.cdnagora33.com/hls/canal1/index.m3u8?njasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgknjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgk3mmm
 
 
-#EXTINF:-1,TVI PORTUGAL
-https://video-auth4.iol.pt/live_tvi/live_tvi/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9Ny8yMC8yMDIzIDc6NTE6NCBQTSZoYXNoX3ZhbHVlPTlmN0dCbjFNR3JSRzBRNkNaUG9lWHc9PSZ2YWxpZG1pbnV0ZXM9MTQ0MCZpZD1hYjk3OTNmYi0xYTljLTRmZjEtYTY0Mi04MDk3NWM2NmExMWY=
-
-#EXTINF:-1,Premiere11
-https://ogcdn-live.video.globo.com/nu/f(bMax=3300000,bMin=2000,i=2)/pfc1/edge-cache-token=Expires=1689606321&KeyName=media-cdn-keyset-prod&IPRanges=MTY3LjI1MC4xMzcuMTY0LzMy&Signature=jij4yp6ztKBtvMY_ggiJP9sCfSzmv6UPptXWFN0ZhAMtJ9fbxu2HMIJhf8ndSr8AhevA8Nd2HS3Z_mcRqKg2AA==/playlist.m3u8
-#EXTINF:-1,Premiere22
-https://live-ancdn-06.video.globo.com/j/eyJhbGciOiJSUzUxMiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJjb3VudHJ5X2NvZGUiOiJCUiIsImRvbWFpbiI6ImxpdmUtYW5jZG4tMDYudmlkZW8uZ2xvYm8uY29tIiwiZXhwIjoxNjg5NjA2NDA4LCJpYXQiOjE2ODk1MjAwMDgsImlzcyI6InBsYXliYWNrLWFwaS1wcm9kLWdjcCIsIm93bmVyIjoiOWQ1ODYyMGQtMGY5Ny00MWMxLTllOWQtZjk2M2E1ODlhNWQ2IiwicGF0aCI6Ii9udS9mKGJNYXg9MzMwMDAwMCxiTWluPTIwMDAsaT0yKS9wZmMxL3BsYXlsaXN0Lm0zdTgifQ.RaaE2JsljGWo_OiI7fZxeuh2TyFT427VoE8EfQjMEEd_iGehEsK_n8S28YBwmBhspe0nAb2OlFS9FR2S4qnCv5oL9eXrgKB5WvSXn-y2jIoNiH5veRcIGIANLXFf039G8GHzpf54WIlgNgHZXC4EVAgA_UUHdy2_aWANvJQPBYwrMuPC0Tr0aSsaNSWYBqAfmafDgEZcxReQxh3DEkHII69zl3efGP3dG-DEp5LIxS82ptV-tVHdA_0Uq0PonpKJRYLSXWeS_JgyvqPp4SrrDXPf07qpPvIDNXjOc0N3dyJDuOta2fr8aOgQDhNVdlQhTwv7MyzrizXo5K2M04DG2A/nu/f(bMax=3300000,bMin=2000,i=2)/pfc1/playlist.m3u8
-
-#EXTINF:-1,PFC HD
-#EXTVLCOPT:http-referrer=https://embedflix.net/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
-https://br.embedflix.net/p2p/prfc1_720p/chunks.m3u8
-
-#EXTINF:-1,AWTV
-https://ebocast.ebosystems.com.br:3070/live/awtvlive.m3u8
-#EXTINF:-1,Lavras CE
-https://stmv1.srvstm.com/igor8605/igor8605/chunklist_w1418367618.m3u8
-
-#EXTINF:-1,Premiere Clubes
-http://superblazer.com.br.global.prod.fastly.net/live/premiereclubes/play2.m3u8
-
-#EXTINF:-1,Premiere 2
-http://superblazer.com.br.global.prod.fastly.net/live/premiere2/play2.m3u8
-
-#EXTINF:-1,Premiere 3
-http://superblazer.com.br.global.prod.fastly.net/live/premiere3/play2.m3u8
-
-#EXTINF:-1,Premiere 4
-http://superblazer.com.br.global.prod.fastly.net/live/premiere4/play2.m3u8
-
-#EXTINF:-1,Premiere 5
-http://superblazer.com.br.global.prod.fastly.net/live/premiere5/play2.m3u8
-
-#EXTINF:-1,Premiere 6
-http://superblazer.com.br.global.prod.fastly.net/live/premiere6/play2.m3u8
-
-#EXTINF:-1,Premiere 7
-http://superblazer.com.br.global.prod.fastly.net/live/premiere7/play2.m3u8
-
-#EXTINF:-1,Sportv
-http://superblazer.com.br.global.prod.fastly.net/live/sportv/play2.m3u8
-
-#EXTINF:-1,Sportv 2
-http://superblazer.com.br.global.prod.fastly.net/live/sportv2/play2.m3u8
-
-
-#EXTINF:-1,Sportv 3
-http://superblazer.com.br.global.prod.fastly.net/live/sportv3/play2.m3u8
-
-
-#EXTINF:-1,Espn
-http://superblazer.com.br.global.prod.fastly.net/live/espn/play2.m3u8
-
-#EXTINF:-1,Espn 2
-http://superblazer.com.br.global.prod.fastly.net/live/espn2/play2.m3u8
-
-#EXTINF:-1,Espn 3
-http://superblazer.com.br.global.prod.fastly.net/live/espn3/play2.m3u8
-
-#EXTINF:-1,Espn 4
-http://superblazer.com.br.global.prod.fastly.net/live/espn4/play2.m3u8
-
-#EXTINF:-1,Tnt
-http://superblazer.com.br.global.prod.fastly.net/live/tnt/play2.m3u8
-
-#EXTINF:-1,Space
-http://superblazer.com.br.global.prod.fastly.net/live/space/play2.m3u8
-
-#EXTINF:-1,Megapix
-http://superblazer.com.br.global.prod.fastly.net/live/megapix/play2.m3u8
-
-#EXTINF:-1,Fx
-http://superblazer.com.br.global.prod.fastly.net/live/fx/play2.m3u8
-
-#EXTINF:-1,TC Action
-http://superblazer.com.br.global.prod.fastly.net/live/telecineaction/play2.m3u8
-
-#EXTINF:-1,TC Pipoca
-http://superblazer.com.br.global.prod.fastly.net/live/telecinepipoca/play2.m3u8
-
-#EXTINF:-1,TC Premium
-http://superblazer.com.br.global.prod.fastly.net/live/telecinepremium/play2.m3u8
-
-#EXTINF:-1,Band
-http://superblazer.com.br.global.prod.fastly.net/live/band/play2.m3u8
-
-#EXTINF:-1,Record
-http://superblazer.com.br.global.prod.fastly.net/live/record/play2.m3u8
-
-#EXTINF:-1,Globo
-http://superblazer.com.br.global.prod.fastly.net/live/globo/play2.m3u8
-
-#EXTINF:-1,Hbo
-http://superblazer.com.br.global.prod.fastly.net/live/hbo/play2.m3u8
-
-#EXTINF:-1,Hbo2
-http://superblazer.com.br.global.prod.fastly.net/live/hbo2/play2.m3u8
-
-#EXTINF:-1,Axn
-http://superblazer.com.br.global.prod.fastly.net/live/axn/play2.m3u8
-
-#EXTINF:-1,A&E
-http://superblazer.com.br.global.prod.fastly.net/live/ae/play2.m3u8
-
-#EXTINF:-1,Viva
-http://superblazer.com.br.global.prod.fastly.net/live/viva/play2.m3u8
-
-#EXTINF:-1,Record
+#EXTINF:-1,Record aberto
 https://cdn.jmvstream.com/w/LVW-10842/LVW10842_513N26MDBL/chunklist.m3u8
-#EXTINF:-1,Sbt
+#EXTINF:-1,Sbt aberto
 https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u8
-#EXTINF:-1,Globo
+#EXTINF:-1,Globo aberto
 http://191.37.250.169:8801/live/NSC/720p.m3u8
 #EXTINF:-1,RedeTV - TV Pampa
 https://59f1cbe63db89.streamlock.net:1443/tvpampa/_definst_/tvpampa/chunklist_w388948239.m3u8
-#EXTINF:-1,TV Cultura
+#EXTINF:-1,TV Cultura aberto
 https://5b33b873179a2.streamlock.net:1443/live/livestream/chunklist_w884249386.m3u8
+#EXTINF:-1,Paramount vip
+https://cdn2.connectbr.com.br/paramount/tracks-v1a1/mono.m3u8
+
+#EXTINF:-1,AWTV webtv
+https://ebocast.ebosystems.com.br:3070/live/awtvlive.m3u8
+#EXTINF:-1,Lavras CE webtv
+https://stmv1.srvstm.com/igor8605/igor8605/chunklist_w1418367618.m3u8
+
+#EXTINF:-1,Rai Italia
+https://d1wwtskvr1r98k.cloudfront.net/out/v1/3227670cd4b24b798a3918c5e52b61f0/index_1.m3u8
+#EXTINF:-1,Claro Sports HD
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(CLARO_SPORTS_LATAM)/index.m3u8
+#EXTINF:-1,Claro Sports SD
+https://linear-fa-p-har3.tv.apple.com/Content/HLS_CBC/Live/channel(mls.ec1.wf_en_1)/index.m3u8
+#EXTINF:-1,Deportv
+https://627441c9ded12.streamlock.net/live-cont.ar/deportv/chunklist_w2024235853.m3u8
+#EXTINF:-1,Espn
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(ESPN)/index.m3u8
+#EXTINF:-1,espn2
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(ESPN2)/index.m3u8
+#EXTINF:-1,espn3
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(ESPN3)/index.m3u8
+#EXTINF:-1,espn premium
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(FOX_SPORTS_PREMIUM)/index.m3u8
+#EXTINF:-1,fox sports
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(FOX_SPORTS)/index.m3u8
+#EXTINF:-1,tnt sports
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(TNT_SPORTS)/index.m3u8
+#EXTINF:-1,tyc sports
+https://arlocallivechannelsdash.lcdn.clarotv.com.ar/Content/HLS_HLS_FK/Live/channel(TYC_SPORTS)/index.m3u8
