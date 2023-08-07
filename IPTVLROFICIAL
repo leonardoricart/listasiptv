@@ -1,19 +1,28 @@
 #EXTM3U
 
-
-
 #EXTINF:-1,Futebol 1 (Vip)
 https://brasil2.cdnagora33.com/hls/canal1/index.m3u8?njasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgknjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgk3mmm|Referer=https://links.brcdn.live/canais/opcao3.php?id=canal1
 
-
-
-
-#EXTINF:0 user-agent="https://futemax.app/" , LRTV
-https://newedge.eu-central-1.edge.mycdn.live/live/esportes10/esportes10_2000/index.m3u8
-
-#EXTINF:0 http-referrer=https://futemax.app/" , LRTV2
-https://newedge.eu-central-1.edge.mycdn.live/live/esportes10/esportes10_2000/index.m3u8
-
+#EXTINF:-1,Sportv (NT)
+https://webudit.cdnhks.lol/lb/premium78/index.m3u8|Referer=https://ntuplay.xyz/
+#EXTINF:-1,Sportv 2 (NT)
+https://webudit.cdnhks.lol/lb/premium79/index.m3u8|Referer=https://ntuplay.xyz/
+#EXTINF:-1,Sportv 3 (NT)
+https://webudit.cdnhks.lol/lb/premium80/index.m3u8|Referer=https://ntuplay.xyz/
+#EXTINF:-1,Premiere (NT)
+https://webudit.cdnhks.lol/lb/premium88/index.m3u8|Referer=https://ntuplay.xyz/
+#EXTINF:-1,Espn (NT)
+https://webudit.cdnhks.lol/lb/premium81/index.m3u8|Referer=https://ntuplay.xyz/
+#EXTINF:-1,Espn 2 (NT)
+https://webudit.cdnhks.lol/lb/premium82/index.m3u8|Referer=https://ntuplay.xyz/
+#EXTINF:-1,Espn 3 (NT)
+https://webudit.cdnhks.lol/lb/premium83/index.m3u8|Referer=https://ntuplay.xyz/
+#EXTINF:-1,Espn 4 (NT)
+https://webudit.cdnhks.lol/lb/premium85/index.m3u8|Referer=https://ntuplay.xyz/
+#EXTINF:-1,Tnt (NT)
+https://webudit.cdnhks.lol/lb/premium87/index.m3u8|Referer=https://ntuplay.xyz/
+#EXTINF:-1,Tnt Sports Argentina (NT)
+https://webudit.cdnhks.lol/lb/premium388/index.m3u8|Referer=https://ntuplay.xyz/
 
 #EXTINF:-1,Sportv ApostaGratis
 https://bal01.vivartec.com.br:8088/hls/livechannel5.m3u8
@@ -90,86 +99,6 @@ http://megablaze.com.global.prod.fastly.net/live/tnt/play2.m3u8
 #EXTINF:-1,Band sports (CDN2)
 https://cdn2.connectbr.com.br/Band-Sports/index.m3u8
 
-#EXTINF:-1,PREMIERE Futmax
-#EXTVLCOPT:http-referrer=https://futemax.app/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://newedge.eu-central-1.edge.mycdn.live/live/esportes10/esportes10_2000/index.m3u8
-
-#EXTINF:-1,Sportv Futmax
-#EXTVLCOPT:http-referrer=https://futemax.app/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://newedge.eu-central-1.edge.mycdn.live/live/vintequatrohrs2/playlist.m3u8
-
-#EXTINF:-1,Sportv 2 Futmax
-#EXTVLCOPT:http-referrer=https://futemax.app/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://newedge.eu-central-1.edge.mycdn.live/live/sportv224ha/playlist.m3u8
-
-#EXTINF:-1,Futebol Futmax
-#EXTVLCOPT:http-referrer=https://futemax.app/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://newedge.eu-central-1.edge.mycdn.live/live/esportes22/esportes22_2000/index.m3u8
-
-
-#EXTINF:-1,Premiere Embedflix
-#EXTVLCOPT:http-referrer=https://embedflix.net/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
-https://hls.embedflix.net/p2p/prfc1/playlist.m3u8
-
-#EXTINF:-1,Premiere 2 Embedflix
-#EXTVLCOPT:http-referrer=https://embedflix.net/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
-https://hls.embedflix.net/p2p/premier2/playlist.m3u8
-
-#EXTINF:-1,Premiere 3 Embedflix
-#EXTVLCOPT:http-referrer=https://embedflix.net/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
-https://hls.embedflix.net/p2p/premier3/playlist.m3u8
-
-#EXTINF:-1,Premiere 4 Embedflix
-#EXTVLCOPT:http-referrer=https://embedflix.net/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
-https://hls.embedflix.net/p2p/premier4/playlist.m3u8
-
-#EXTINF:-1,Premiere 5 Embedflix
-#EXTVLCOPT:http-referrer=https://embedflix.net/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
-https://hls.embedflix.net/p2p/premier5/playlist.m3u8
-
-#EXTINF:-1,Premiere 6 Embedflix
-#EXTVLCOPT:http-referrer=https://embedflix.net/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
-https://hls.embedflix.net/p2p/premier6/playlist.m3u8
-
-#EXTINF:-1,Sportv Embedflix
-#EXTVLCOPT:http-referrer=https://embedflix.net/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
-https://hls.embedflix.net/p2p/sportv_720p/chunks.m3u8
-
-#EXTINF:-1,Sportv 2 Embedflix
-#EXTVLCOPT:http-referrer=https://embedflix.net/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
-https://hls.embedflix.net/p2p/sportv2_720p/playlist.m3u8
-
-#EXTINF:-1,Sportv 3 Embedflix
-#EXTVLCOPT:http-referrer=https://embedflix.net/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
-https://hls.embedflix.net/p2p/sportv3_720p/playlist.m3u8
-
-#EXTINF:-1,Canal 1 Futmais
-#EXTVLCOPT:http-referrer=https://links.brcdn.live/canais/opcao1.php?id=canal1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://brasil2.cdnagora33.com/hls/canal1/index.m3u8?njasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgknjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgk3mmm
-
-#EXTINF:-1,Canal 2 Futmais
-#EXTVLCOPT:http-referrer=https://links.brcdn.live/canais/opcao1.php?id=canal1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://brasil2.cdnagora33.com/hls/canal2/index.m3u8?njasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgknjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgk3mmm
-
-#EXTINF:-1,Canal 3 Futmais
-#EXTVLCOPT:http-referrer=https://links.brcdn.live/canais/opcao1.php?id=canal1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://brasil2.cdnagora33.com/hls/canal3/index.m3u8?njasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgknjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgk3mmm
 
 #EXTINF:-1,Premiere Clubes (Vip)
 http://megablaze.com.global.prod.fastly.net/live/premiereclubes/play2.m3u8
