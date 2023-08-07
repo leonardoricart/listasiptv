@@ -1,5 +1,168 @@
 #EXTM3U
 
+#EXTINF:0 user-agent="https://futemax.app/" , LRTV
+https://newedge.eu-central-1.edge.mycdn.live/live/esportes10/esportes10_2000/index.m3u8
+
+#EXTINF:0 http-referrer=https://futemax.app/" , LRTV2
+https://newedge.eu-central-1.edge.mycdn.live/live/esportes10/esportes10_2000/index.m3u8
+
+
+#EXTINF:-1,Sportv ApostaGratis
+https://bal01.vivartec.com.br:8088/hls/livechannel5.m3u8
+
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/a/a2/Logo_Premiere_FC_2018.png" group-title="Pay per view",PREMIERE 2 IP
+http://185.150.190.225:16464/
+
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/a/a2/Logo_Premiere_FC_2018.png" group-title="Pay per view",PREMIERE 3 IP
+http://185.150.190.225:16468/
+
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/a/a2/Logo_Premiere_FC_2018.png" group-title="Pay per view",PREMIERE 4 IP
+http://185.150.190.225:16472/
+
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/a/a2/Logo_Premiere_FC_2018.png" group-title="Pay per view",PREMIERE 5 IP
+http://185.150.190.225:16476/
+
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/a/a2/Logo_Premiere_FC_2018.png" group-title="Pay per view",PREMIERE 6 IP
+http://185.150.190.225:16482/
+
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/pt/a/a2/Logo_Premiere_FC_2018.png" group-title="Pay per view",PREMIERE CLUBES IP
+http://185.150.190.225:16460/
+
+#EXTINF:0 tvg-logo="https://logodownload.org/wp-content/uploads/2017/07/sportv-logo-0.png" group-title="esportes",SPORTV IP
+http://209.222.97.92:16525/
+
+#EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/TNT_Logo_2016.svg/1000px-TNT_Logo_2016.svg.png" group-title="filmes e series",TNT IP
+http://45.58.126.146:14341/
+
+#EXTINF:0 tvg-logo="https://logodownload.org/wp-content/uploads/2018/11/canal-space-logo.png" group-title="filmes e series",SPACE IP
+http://45.58.126.146:14323/
+
+#EXTINF:0 tvg-logo="http://s2.glbimg.com/KV5eehME-_BD7QEL-W06_2swk4U=/s.glbimg.com/og/rg/f/original/2014/04/03/vemai_marca_1.jpg" group-title="globo",GLOBO MINAS IP
+http://185.150.190.225:16263/
+ 
+#EXTINF:0 tvg-logo="http://s2.glbimg.com/KV5eehME-_BD7QEL-W06_2swk4U=/s.glbimg.com/og/rg/f/original/2014/04/03/vemai_marca_1.jpg" group-title="globo",GLOBO MATO GROSSO IP
+http://15.235.55.115:14107
+
+#EXTINF:0 tvg-logo="http://s2.glbimg.com/KV5eehME-_BD7QEL-W06_2swk4U=/s.glbimg.com/og/rg/f/original/2014/04/03/vemai_marca_1.jpg" group-title="globo",GLOBO BRASILIA IP
+http://45.58.126.146:14011/
+
+#EXTINF:0 tvg-logo="http://s2.glbimg.com/KV5eehME-_BD7QEL-W06_2swk4U=/s.glbimg.com/og/rg/f/original/2014/04/03/vemai_marca_1.jpg" group-title="globo",Globo NSC
+http://191.37.250.169:8801/live/NSC/720p.m3u8
+
+#EXTINF:-1,Premiere Clubes (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/premiereclubes/play2.m3u8
+#EXTINF:-1,Premiere 2 (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/premiere2/play2.m3u8
+#EXTINF:-1,Premiere 3 (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/premiere3/play2.m3u8
+#EXTINF:-1,Premiere 4 (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/premiere4/play2.m3u8
+#EXTINF:-1,Premiere 5 (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/premiere5/play2.m3u8
+#EXTINF:-1,Premiere 6 (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/premiere6/play2.m3u8
+#EXTINF:-1,Premiere 7 (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/premiere7/play2.m3u8
+#EXTINF:-1,Sportv (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/sportv/play2.m3u8
+#EXTINF:-1,Sportv (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/sportv2/play2.m3u8
+#EXTINF:-1,Sportv 3 (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/sportv3/play2.m3u8
+#EXTINF:-1,Espn (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/espn/play2.m3u8
+#EXTINF:-1,Espn 2 (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/espn2/play2.m3u8
+#EXTINF:-1,Espn 3 (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/espn3/play2.m3u8
+#EXTINF:-1,Espn 4 (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/espn4/play2.m3u8
+#EXTINF:-1,Tnt (Megablaze)
+http://megablaze.com.global.prod.fastly.net/live/tnt/play2.m3u8
+#EXTINF:-1,Band sports (CDN2)
+https://cdn2.connectbr.com.br/Band-Sports/index.m3u8
+
+#EXTINF:-1,PREMIERE Futmax
+#EXTVLCOPT:http-referrer=https://futemax.app/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://newedge.eu-central-1.edge.mycdn.live/live/esportes10/esportes10_2000/index.m3u8
+
+#EXTINF:-1,Sportv Futmax
+#EXTVLCOPT:http-referrer=https://futemax.app/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://newedge.eu-central-1.edge.mycdn.live/live/vintequatrohrs2/playlist.m3u8
+
+#EXTINF:-1,Sportv 2 Futmax
+#EXTVLCOPT:http-referrer=https://futemax.app/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://newedge.eu-central-1.edge.mycdn.live/live/sportv224ha/playlist.m3u8
+
+#EXTINF:-1,Futebol Futmax
+#EXTVLCOPT:http-referrer=https://futemax.app/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://newedge.eu-central-1.edge.mycdn.live/live/esportes22/esportes22_2000/index.m3u8
+
+
+#EXTINF:-1,Premiere Embedflix
+#EXTVLCOPT:http-referrer=https://embedflix.net/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
+https://hls.embedflix.net/p2p/prfc1/playlist.m3u8
+
+#EXTINF:-1,Premiere 2 Embedflix
+#EXTVLCOPT:http-referrer=https://embedflix.net/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
+https://hls.embedflix.net/p2p/premier2/playlist.m3u8
+
+#EXTINF:-1,Premiere 3 Embedflix
+#EXTVLCOPT:http-referrer=https://embedflix.net/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
+https://hls.embedflix.net/p2p/premier3/playlist.m3u8
+
+#EXTINF:-1,Premiere 4 Embedflix
+#EXTVLCOPT:http-referrer=https://embedflix.net/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
+https://hls.embedflix.net/p2p/premier4/playlist.m3u8
+
+#EXTINF:-1,Premiere 5 Embedflix
+#EXTVLCOPT:http-referrer=https://embedflix.net/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
+https://hls.embedflix.net/p2p/premier5/playlist.m3u8
+
+#EXTINF:-1,Premiere 6 Embedflix
+#EXTVLCOPT:http-referrer=https://embedflix.net/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
+https://hls.embedflix.net/p2p/premier6/playlist.m3u8
+
+#EXTINF:-1,Sportv Embedflix
+#EXTVLCOPT:http-referrer=https://embedflix.net/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
+https://hls.embedflix.net/p2p/sportv_720p/chunks.m3u8
+
+#EXTINF:-1,Sportv 2 Embedflix
+#EXTVLCOPT:http-referrer=https://embedflix.net/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
+https://hls.embedflix.net/p2p/sportv2_720p/playlist.m3u8
+
+#EXTINF:-1,Sportv 3 Embedflix
+#EXTVLCOPT:http-referrer=https://embedflix.net/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/59.0
+https://hls.embedflix.net/p2p/sportv3_720p/playlist.m3u8
+
+#EXTINF:-1,Canal 1 Futmais
+#EXTVLCOPT:http-referrer=https://links.brcdn.live/canais/opcao1.php?id=canal1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://brasil2.cdnagora33.com/hls/canal1/index.m3u8?njasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgknjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgk3mmm
+
+#EXTINF:-1,Canal 2 Futmais
+#EXTVLCOPT:http-referrer=https://links.brcdn.live/canais/opcao1.php?id=canal1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://brasil2.cdnagora33.com/hls/canal2/index.m3u8?njasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgknjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgk3mmm
+
+#EXTINF:-1,Canal 3 Futmais
+#EXTVLCOPT:http-referrer=https://links.brcdn.live/canais/opcao1.php?id=canal1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://brasil2.cdnagora33.com/hls/canal3/index.m3u8?njasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgknjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgk3mmm
+
 #EXTINF:-1,Premiere Clubes (Vip)
 http://megablaze.com.global.prod.fastly.net/live/premiereclubes/play2.m3u8
 #EXTINF:-1,Premiere 2 (Vip)
