@@ -1,7 +1,7 @@
 #EXTM3U
 
-#EXTINF:0 user-agent="https://futemax.app/" , LRTV
-https://newedge.eu-central-1.edge.mycdn.live/live/esportes10/esportes10_2000/index.m3u8
+#EXTINF:0 user-agent="https://futemax.app/" , LRTV1
+https://744133.akamaized.net/hls/live/717684/ch01/64ee2452ec73b4f34fe340f96fd81a2bfe4059c8/video-m3_video/hdntl=exp=1692468318~acl=%2f*~id=5389420fabd3470d966babe9044f207d~data=hdntl~hmac=75e83e0d00d06cbbb9f26f891e2d2ec4507866e0992c66e0a25d0ab037e40210/video.m3u8
 
 #EXTINF:0 http-referrer=https://futemax.app/" , LRTV2
 https://newedge.eu-central-1.edge.mycdn.live/live/esportes10/esportes10_2000/index.m3u8
