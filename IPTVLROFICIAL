@@ -1,11 +1,8 @@
 #EXTM3U
 
-#EXTINF:-1,Futebol 1 (Vip)
-https://brasil2.cdnagora33.com/hls/canal1/index.m3u8?njasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgknjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgklnsadngklasklgnalsfnnjasfhjaklgnjkhaskdgksndgnasdmgk3mmm|Referer=https://links.brcdn.live/canais/opcao3.php?id=canal1
+#EXTINF:-1,Futebol 1 lrtv
+https://imgarena-prod-v2-eu.akamaized.net/hls/live/2094743/369904-335998/hdntl=exp=1693880198~acl=%2f*~id=2791929d-1dd7-479f-8546-06a64dec2045~data=hdntl~hmac=598dafbfbe9562ea1a36d1e75e81790052068fee85d32fc60ee162cc99460b3b/playlist_360p25.m3u8
 
-#EXTINF:-1,Sportv (NT)
-https://webudit.cdnhks.lol/lb/premium78/index.m3u8|Referer=https://ntuplay.xyz/
-#EXTINF:-1,Sportv 2 (NT)
 https://webudit.cdnhks.lol/lb/premium79/index.m3u8|Referer=https://ntuplay.xyz/
 #EXTINF:-1,Sportv 3 (NT)
 https://webudit.cdnhks.lol/lb/premium80/index.m3u8|Referer=https://ntuplay.xyz/
