@@ -1,5 +1,5 @@
 <item>
-<title>[COLOR lime][B] SERVIDOR 1 [/B][/COLOR]</title>
+<title>[COLOR blue][B] SERVIDOR 1 [/B][/COLOR]</title>
 <link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
@@ -23,7 +23,7 @@
 
 
 <item>
-<title>[COLOR lime][B] SERVIDOR 2 [/B][/COLOR]</title>
+<title>[COLOR blue][B] SERVIDOR 2 [/B][/COLOR]</title>
 <link>$doregex[makelist]</link>
 <regex>
 <name>makelist</name>
