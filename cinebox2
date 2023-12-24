@@ -9,7 +9,7 @@
 <thumbnail>NA</thumbnail>
 ]]></listrepeat>
 <expres>#EXTINF:.*,(.*?)\n.*(http.*m3u8)</expres>
-<page>https://cineboxplay.blogspot.com/2021/04/servidor-3.html</page>
+<page>https://cineboxplay.blogspot.com/2023/12/servidor-3.html</page>
 <referer></referer>
 <x-forward></x-forward>
 <agent>Kodi/18.0</agent>
@@ -33,7 +33,7 @@
 <thumbnail>NA</thumbnail>
 ]]></listrepeat>
 <expres>#EXTINF:.*,(.*?)\n.*(http.*m3u8)</expres>
-<page>https://cineboxplay.blogspot.com/2023/12/servidor-4.html</page>
+<page>https://cineboxplay.blogspot.com/2023/12/servidor-4_23.html</page>
 <referer></referer>
 <x-forward></x-forward>
 <agent>Kodi/18.0</agent>
