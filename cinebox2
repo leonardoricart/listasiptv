@@ -9,7 +9,7 @@
 <thumbnail>NA</thumbnail>
 ]]></listrepeat>
 <expres>#EXTINF:.*,(.*?)\n.*(http.*m3u8)</expres>
-<page>https://cineboxplay.blogspot.com/2023/12/servidor-3.html</page>
+<page>https://cineboxonline2.blogspot.com/2024/01/servidor-1.html</page>
 <referer></referer>
 <x-forward></x-forward>
 <agent>Kodi/18.0</agent>
@@ -33,7 +33,7 @@
 <thumbnail>NA</thumbnail>
 ]]></listrepeat>
 <expres>#EXTINF:.*,(.*?)\n.*(http.*m3u8)</expres>
-<page>https://github.com/leonardoricart/LRTV9.8/raw/main/18</page>
+<page>https://cineboxonline2.blogspot.com/2024/08/servidor-2.html</page>
 <referer></referer>
 <x-forward></x-forward>
 <agent>Kodi/18.0</agent>
