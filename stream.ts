@@ -1,1 +1,1 @@
-https://glb.bozztv.com/glb/ssh101/tvpatu/index.m3u8
+http://voz.one:80/49900930/92623193/95735
