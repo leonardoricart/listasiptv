@@ -1,51 +1,15 @@
 #EXTM3U
 
-#EXTINF:-1,teste
-#EXTVLCOPT:http-referrer=https://futemax.app/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://redirect.mycdn.live/live/telecinepipocahd/tracks-v1a1/2023/06/16/22/17/45-05000.m3u8
+#EXTINF:-1,RetroCartoon
+https://stmv1.srvif.com/retrotv/retrotv/playlist-480p.m3u8
 
-#EXTINF:-1,SPORTV
-#EXTVLCOPT:http-referrer=https://futemax.app/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://newedge.eu-central-1.edge.mycdn.live/live/vintequatrohrs2/playlist.m3u8
-
-#EXTINF:-1,PREMIERE
-#EXTVLCOPT:http-referrer=https://futemax.app/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://newedge.eu-central-1.edge.mycdn.live/live/esportes10/esportes10_2000/index.m3u8
-
-#EXTINF:-1,Danz
-#EXTVLCOPT:http-referrer=https://futemax.app/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://newedge.eu-central-1.edge.mycdn.live/live/esportes22/esportes22_2000/index.m3u8
-
-#EXTINF:-1,sportv 2
-#EXTVLCOPT:http-referrer=https://futemax.app/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://newedge.eu-central-1.edge.mycdn.live/live/sportv224ha/playlist.m3u8
-
-#EXTINF:-1,sportv 3
-#EXTVLCOPT:http-referrer=https://futemax.app/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sportv3sd/tracks-v1a1/mono.m3u8?md5=x7rHeS47bwkMMW4eR3HVJw&expires=1686657729
-
-#EXTINF:-1,Globo sp
-#EXTVLCOPT:http-referrer=https://futemax.app/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://newedge.eu-central-1.edge.mycdn.live/live/vintequatrohrs1/playlist.m3u8
-
-#EXTINF:-1,Espn
-#EXTVLCOPT:http-referrer=https://futemax.app/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-https://newedge.eu-central-1.edge.mycdn.live/live/vintequatrohrs3/playlist.m3u8
+#EXTINF:-1,aquecimento-sportv
 
 #EXTINF:-1,
-#EXTVLCOPT:http-referrer=https://futemax.app/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
-
 
 #EXTINF:-1,
-#EXTVLCOPT:http-referrer=https://futemax.app/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0
+
+#EXTINF:-1,
+
+#EXTINF:-1,
 
