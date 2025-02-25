@@ -1,31 +1,12 @@
 <layouttype>thumbnail</layouttype>
 
-
 <channels>
 <channel>
-<name>[B][COLOR lime]●[/COLOR] [COLOR white] SERVIDOR 1 [/COLOR][/B]</name>
-<thumbnail>https://i.pinimg.com/originals/ad/d4/bf/add4bf2e461198e930a47438f500ca7a.png</thumbnail>
-<externallink>https://cineboxplay.blogspot.com/2023/12/servidor-1.html</externallink>
-<fanart>https://i.ytimg.com/vi/T3dapQU_kSs/maxresdefault.jpg</fanart>
-<info></info>
-</channel>
-
-<channels>
-<channel>
-<name>[B][COLOR lime]●[/COLOR] [COLOR white] SERVIDOR 2 [/COLOR][/B]</name>
-<thumbnail>https://i.pinimg.com/originals/ad/d4/bf/add4bf2e461198e930a47438f500ca7a.png</thumbnail>
-<externallink>https://cineboxplay.blogspot.com/2023/12/servidor-2.html</externallink>
-<fanart>https://i.ytimg.com/vi/T3dapQU_kSs/maxresdefault.jpg</fanart>
-<info></info>
-</channel>
-
-<channels>
-<channel>
-<name>[B][COLOR lime]●[/COLOR] [COLOR white] SERVIDOR 3 [/COLOR][/B]</name>
-<thumbnail>https://i.pinimg.com/originals/ad/d4/bf/add4bf2e461198e930a47438f500ca7a.png</thumbnail>
+<name>[B][COLOR lime]●[/COLOR] [COLOR white]LIVE TV[/COLOR][/B]</name>
+<thumbnail>https://images-na.ssl-images-amazon.com/images/I/410O56DAkyL.png</thumbnail>
 <externallink>https://cineboxonline2.blogspot.com/2025/02/vip.html</externallink>
-<fanart>https://i.ytimg.com/vi/T3dapQU_kSs/maxresdefault.jpg</fanart>
-<info></info>
+<fanart>https://imirante.com/imagens/2017/12/20/1513791715-298011502-810x471.jpg</fanart>
+<info>portugalkodi.com</info>
 </channel>
 
 </channels>
