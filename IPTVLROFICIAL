@@ -1,4 +1,17 @@
 #EXTM3U
+
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV Vila Real (Record MT) HD
+https://cdn.jmvstream.com/w/LVW-10842/LVW10842_513N26MDBL/chunklist.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",Cariri TV
+https://video05.logicahost.com.br/cariritv/cariritv/chunklist_w10738583.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",Futebol Ao vivo
+https://live20.bozztv.com/akamaissh101/ssh101/futebolaovivo/playlist.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="TV Aberta" tvg-logo="" group-title="Canais | Abertos",TV IP
+http://192.168.18.104:8080/
+
 #EXT-X-SESSION-DATA:DATA-ID="com.xui.1_5_13"
 #EXTINF:-1 tvg-id="" tvg-name="24 hrs FORMIGA ATOMICA" tvg-logo="https://files.jpnetwork.com.br/index.php/s/qyAftjKfaKjTcip/download/24h.png" group-title="24HORAS F2",24 hrs FORMIGA ATOMICA
 http://su20.bibliotecavsv.store:80/111177889/533718842/4666507
@@ -2170,3 +2183,4 @@ http://su20.bibliotecavsv.store:80/111177889/533718842/4231961
 http://su20.bibliotecavsv.store:80/111177889/533718842/4231962
 #EXTINF:-1 tvg-id="ZooMoo.sg" tvg-name="ZOOMOO SD" tvg-logo="https://img.inboxbr.pro/icones_channels/zoomoo-kids.png" group-title="⭐ INFANTIL",ZOOMOO SD
 http://su20.bibliotecavsv.store:80/111177889/533718842/4231963
+
